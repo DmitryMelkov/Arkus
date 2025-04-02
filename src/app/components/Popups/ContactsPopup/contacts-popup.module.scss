@@ -16,14 +16,30 @@
 
   &__close {
     margin-top: 5px;
-    width: 25px;
-    height: 25px;
-
+    width: 40px; // Увеличим область клика
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; // Круглая форма
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      background: rgba($nightBlue50, 0.1); // Полупрозрачный серый при наведении
+    }
 
     img {
-      width: 100%;
-      height: 100%;
+      width: 25px;
+      height: 25px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover img {
+      transform: rotate(90deg); // Поворот иконки при наведении
     }
   }
 
@@ -60,7 +76,7 @@
 
   &__center {
     display: flex;
-    align-items: end;
+    align-items: center;
   }
 
   &__left {
@@ -99,15 +115,13 @@
 
   &__contacts {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 
     &-title {
+      margin-bottom: 24px;
       @include onestFont($onestH7);
       line-height: 20px;
       color: $electricBlue;
-
-      margin-right: 32px;
-      max-width: 176px;
     }
 
     &-icons {
@@ -115,20 +129,41 @@
       gap: 16px;
     }
 
-    &-icon {
-      display: block;
-      width: 50px;
-      height: 50px;
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      max-width: 192px;
+      width: 100%;
+      height: 42px;
+      border-radius: 24px;
+      @include onestFont($onestH5);
+      text-decoration: none;
+      color: $snowWhite;
+      transition: opacity 0.3s ease-in-out;
 
-      img {
-        width: 100%;
-        height: 100%;
+      &:first-child {
+        background-color: $homeworld; // Цвет Telegram
       }
+
+      &:last-child {
+        background-color: $vitalize; // Цвет WhatsApp
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
     }
   }
 
   &__right {
-    max-width: 196px;
+    max-width: 212px;
   }
 
   &__month {
@@ -158,7 +193,7 @@
   }
 
   &__right-text {
-    max-width: 163px;
+    width: 100%;
     margin-left: 6px;
     @include onestFont($onestH3);
     line-height: 15px;

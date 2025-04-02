@@ -93,8 +93,12 @@ export default function HeaderMobilePopup({
           className={cx("header__mobile-order-button")}
           onClick={openCallbackPopup}
         >
-          Заказать консультацию
+          Получить бесплатную консультацию
         </button>
+
+        <p className={cx("header__mobile-order-descr")}>
+          Мы знаем как сделать управление МКД простым и эффективным
+        </p>
 
         <div className={cx("header__mobile-phone-container")}>
           <a href={"tel:+78005504022"} className={cx("header__mobile-phone")}>
@@ -109,12 +113,14 @@ export default function HeaderMobilePopup({
           </button>
         </div>
 
-        <img
+        
+
+        {/* <img
           className={cx("header__mobile-logo")}
           src={"/images/icons/mobileLogo.svg"}
           alt={"Логотип"}
           loading='lazy'
-        />
+        /> */}
       </div>
     </section>
   );

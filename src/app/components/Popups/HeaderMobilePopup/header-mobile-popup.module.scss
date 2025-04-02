@@ -7,8 +7,7 @@
   }
 }
 
-
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1280px) {
   .header {
     &__mobile-popup {
       display: flex;
@@ -47,13 +46,14 @@
       display: flex;
       justify-content: flex-end;
       width: 100%;
-      max-width: 728px;
       padding: 20px 26px;
     }
 
     &__mobile-wrapper {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       margin: 0 auto;
       max-width: 728px;
       width: 100%;
@@ -64,7 +64,7 @@
       margin-right: auto;
       margin-left: auto;
       margin-top: 52px;
-      margin-bottom: 113px;
+      margin-bottom: 40px;
     }
 
     &__mobile-links {
@@ -81,14 +81,18 @@
     }
 
     &__mobile-order-button {
-      padding: 20px 99px;
+      padding: 20px 56px;
       @include onestFont($onestH5);
       line-height: 18px;
       color: $blueSky;
-      background-color: $oceanBlue;
+      background-color: $electricBlue;
       border-radius: 50px;
       max-width: 361px;
       margin: 0 auto;
+      transition: background-color 0.3s ease-in-out;
+      &:active {
+        background-color: $oceanBlue;
+      }
     }
 
     &__mobile-phone-container {
@@ -116,6 +120,13 @@
       width: 78px;
       margin: 0 auto;
     }
+    &__mobile-order-descr {
+      margin-top: 20px;
+      max-width: 310px;
+      text-align: center;
+      @include onestFont($onestH5);
+      color: $electricBlue;
+    }
   }
 }
 
@@ -123,7 +134,7 @@
   .header {
     &__close-button {
       padding: 20px 16px;
-    }  
+    }
 
     &__mobile-order-button {
       padding: 19px 83px;
@@ -140,7 +151,6 @@
     }
   }
 }
-
 
 @media screen and (max-width: 393px) {
   .header {
