@@ -38,7 +38,7 @@ export default function Hero() {
       <div className={`${cx('hero__wrapper')}`}>
         <h1 className={cx('hero__title')}>
           <span className={cx('hero__title_span')}>Программа </span>
-          УК, ТСЖ и РСО {' '}
+          УК, ТСЖ и РСО {' '} <br className={cx('hero__desktop-br')} />
           <span className={cx('hero__title_span')}>поможет</span>{' '}
           <TypingEffect phrases={phrases} color="rgba(0, 57, 144, 0.5)" />
         </h1>

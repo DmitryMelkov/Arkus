@@ -68,8 +68,6 @@
   }
 
   &__phone-subtitle-container {
-    padding-left: 20px;
-    padding-right: 20px;
     max-width: 1920px;
     display: flex;
     justify-content: flex-end;
@@ -114,16 +112,32 @@
   &__phone-box {
     display: flex;
   }
+  &__phone-span {
+    width: 192px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 1;
+    font-size: 14px;
+    line-height: 14px;
+    color: $oceanBlue50;
+  }
 }
 
 @media screen and (max-width: 1920px) {
   .header {
     &__top-container {
-      max-width: 1440px;
+      max-width: 1445px;
     }
-
     &__logo-container > img {
       width: 118px;
+    }
+
+    &__phone-span {
+      top: 20px;
+    }
+    &__phone-subtitle-container {
+      max-width: 1445px;
     }
 
     &__links {
