@@ -1,0 +1,256 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+@import '@/app/styles/animations.module';
+
+.cooperate {
+	margin: 172px auto 222px auto;
+	max-width: 1920px;
+
+	&__title {
+		font: $involveH32;
+		line-height: 60px;
+		color: $electricBlue;
+		margin-bottom: 65px;
+	}
+
+	&__companies {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+
+	&__companies-mobile {
+		display: none;
+	}
+
+	&__sber {
+		width: 433px;
+		height: 120px;
+		background-image: url('../../../../public/images/banks/sber.svg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		transition: $btnTransition;
+
+		&:hover {
+			background-image: url('../../../../public/images/banks/sberColor.svg');
+		}
+	}
+
+	&__tbank {
+		width: 244px;
+		height: 75px;
+		background-image: url('../../../../public/images/banks/tbank.svg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		transition: $btnTransition;
+
+		&:hover {
+			background-image: url('../../../../public/images/banks/tbankColor.svg');
+		}
+	}
+
+	&__alfa {
+		width: 351px;
+		height: 106px;
+		background-image: url('../../../../public/images/banks/alfa.svg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		transition: $btnTransition;
+
+		&:hover {
+			background-image: url('../../../../public/images/banks/alfaColor.svg');
+		}
+	}
+
+	&__gazprom {
+		width: 355px;
+		height: 92px;
+		background-image: url('../../../../public/images/banks/gazprom.svg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		transition: $btnTransition;
+
+		&:hover {
+			background-image: url('../../../../public/images/banks/gazpromColor.svg');
+		}
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	.cooperate {
+		margin-top: 127px;
+		margin-bottom: 109px;
+		max-width: 1440px;
+
+		&__title {
+			font: $involveH4;
+			line-height: 43px;
+			margin-bottom: 46px;
+		}
+
+		&__companies {
+			gap: 107px;
+		}
+
+		&__sber {
+			width: 308px;
+			height: 85px;
+		}
+
+		&__tbank {
+			width: 174px;
+			height: 53px;
+		}
+
+		&__alfa {
+			width: 250px;
+			height: 75px;
+		}
+
+		&__gazprom {
+			width: 253px;
+			height: 65px;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.cooperate {
+		max-width: 1240px;
+		margin: 100px auto;
+
+		&__title {
+			font: $involveH16;
+			line-height: 37px;
+			margin-bottom: 60px;
+		}
+
+		&__sber {
+			width: 300px;
+			height: 82px;
+		}
+
+		&__tbank {
+			width: 209px;
+			height: 64px;
+		}
+
+		&__alfa {
+			width: 264px;
+			height: 80px;
+		}
+
+		&__gazprom {
+			width: 295px;
+			height: 76px;
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.cooperate {
+		max-width: 984px;
+		margin: 80px auto;
+
+		&__title {
+			margin-bottom: 42px;
+		}
+
+		&__companies {
+			display: none;
+		}
+
+		&__companies-mobile {
+			display: flex;
+			max-width: 100vw;
+		}
+
+		&__items-wrap {
+			position: relative;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+			user-select: none;
+			gap: 70px;
+		}
+
+		&__items {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 70px;
+			counter-reset: item;
+			justify-content: space-around;
+			min-width: 100%;
+			position: relative;
+		}
+
+		&__marquee {
+			animation: $scroll-animation;
+		}
+
+		&__item {
+			flex: 0 0 auto;
+			counter-increment: item;
+			transition: $fastTransition;
+			background-image: unset;
+
+			&:hover {
+				background-image: unset;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.cooperate {
+		max-width: 728px;
+
+		&__title {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.cooperate {
+		margin: 90px auto;
+    max-width: 363px;
+
+		&__title {
+			@include onestFont($onestH11);
+			line-height: 23px;
+			margin-bottom: 32px;
+			text-align: center;
+		}
+
+		&__sber {
+			width: 193px;
+			height: 30px;
+		}
+
+		&__tbank {
+			width: 108px;
+			height: 33px;
+		}
+
+		&__alfa {
+			width: 147px;
+			height: 30px;
+		}
+
+		&__gazprom {
+			width: 157px;
+			height: 33px;
+		}
+
+		&__items-wrap {
+			gap: 56px;
+		}
+
+		&__items {
+			gap: 56px;
+		}
+	}
+}

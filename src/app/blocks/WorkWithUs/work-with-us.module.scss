@@ -1,0 +1,244 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.us {
+  margin: 122px auto 176px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(auto, 460px) auto;
+  gap: 20px 20px;
+  max-width: 1920px;
+
+  &__graph {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid-column: 1 / 3;
+    background-image: url("../../../../public/images/workWithUsGraph.webp");
+    background-repeat: no-repeat;
+    background-size: 840px 460px;
+    background-position: right;
+    max-height: 460px;
+  }
+
+  &__title {
+    font: $involveH10;
+    line-height: 97px;
+    color: $oceanBlue;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 29px;
+    background-color: $blueSky;
+    max-height: 430px;
+  }
+
+  &__card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__card-icon-container {
+    width: 74px;
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $snowWhite;
+  }
+
+  &__card-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__card-title {
+    @include onestFont($onestH31);
+    line-height: 57px;
+    color: $oceanBlue;
+  }
+
+  &__card-text {
+    @include onestFont($onestH16);
+    line-height: 27px;
+    color: $oceanBlue;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .us {
+    margin: 91px auto 133px auto;
+    gap: 14px 20px;
+    grid-auto-rows: minmax(auto, 306px) auto;
+    max-width: 1440px;
+
+    &__graph {
+      background-size: 598px 318px;
+      background-position: right top;
+    }
+
+    &__title {
+      font: $involveH7;
+      line-height: 62px;
+    }
+
+    &__card {
+      gap: 11px;
+      padding: 20px 20px 14px 20px;
+      max-height: 306px;
+    }
+
+    &__card-top {
+      gap: 25px;
+    }
+
+    &__card-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    &__card-icon-container {
+      width: 53px;
+      height: 53px;
+    }
+
+    &__card-title {
+      @include onestFont($onestH28);
+      line-height: 41px;
+    }
+
+    &__card-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .us {
+    max-width: 1240px;
+    margin: 80px auto;
+
+    &__graph {
+      background-size: 577px 306px;
+    }
+
+    &__title {
+      font: $involveH14;
+      line-height: 46px;
+    }
+
+    &__card {
+      gap: 28px;
+      padding: 20px;
+    }
+
+    &__card-top {
+      gap: 24px;
+    }
+
+    &__card-icon-container {
+      width: 52px;
+      height: 52px;
+    }
+
+    &__card-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    &__card-title {
+      @include onestFont($onestH45);
+      line-height: 36px;
+    }
+
+    &__card-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .us {
+    max-width: 984px;
+    margin: 88px auto 60px auto;
+
+    &__graph {
+      background-size: 412px 218px;
+    }
+
+    &__card {
+      max-height: 324px;
+    }
+
+    &__br {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .us {
+    max-width: 728px;
+    margin: 80px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 302px 302px;
+
+    &__graph {
+      background-image: unset;
+    }
+
+    &__title {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &__card {
+      gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .us {
+    margin: 90px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 363px;
+
+    &__title {
+      font: $involveH4;
+      line-height: 43px;
+    }
+
+    &__card {
+      gap: 32px;
+      padding: 20px 16px;
+    }
+
+    &__card-title {
+      @include onestFont($onestH21);
+      line-height: 31px;
+    }
+
+    &__card-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+
+      &_invisible {
+        display: none;
+      }
+    }
+
+    &__br {
+      display: none;
+    }
+  }
+}

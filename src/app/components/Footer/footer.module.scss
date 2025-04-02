@@ -1,0 +1,784 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.footer {
+  padding: 45px 0 31px 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+		'text phone'
+    'products contacts'
+		'politic support';
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+
+  &__wrapper {
+    background: $backgroundFooter;
+    width: 100%;
+  }
+
+  &__text-container {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+  }
+
+  &__logo {
+    width: 197px;
+  }
+
+  &__top-text {
+    @include onestFont($onestH26);
+    line-height: 41px;
+    color: $blueSky50;
+    max-width: 1100px;
+  }
+
+  &__mobile-technical-support-container {
+    display: none;
+  }
+
+  &__phone-container {
+    grid-area: phone;
+    margin: 0 0 118px auto;
+    display: grid;
+    grid-template-columns: auto 190px;
+    grid-template-rows: auto auto;
+    max-width: 564px;
+  }
+
+  &__phone {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    @include onestFont($onestH38);
+    line-height: 85px;
+    color: $blueSky;
+  }
+
+  &__phone-link {
+    @include onestFont($onestH18_1);
+    line-height: 28px;
+    color: $blueSky;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: left;
+
+    &.mobile {
+      display: none;
+    }
+  }
+
+  &__mobile-links-container {
+    display: none;
+  }
+
+  &__sales-text {
+    @include onestFont($onestH18);
+    line-height: 28px;
+    color: $blueSky50;
+  }
+
+  &__sales-link {
+    @include onestFont($onestH18_1);
+    line-height: 28px;
+    color: $blueSky;
+    text-decoration: underline;
+  }
+
+  &__mobile-block {
+    display: none;
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 14px 149px;
+    margin: 0 0 auto auto;
+
+    &_mobile {
+      display: none;
+    }
+  }
+
+  &__applications-text {
+    @include onestFont($onestH18);
+    line-height: 28px;
+    color: $blueSky50;
+  }
+
+  &__applications {
+    display: flex;
+    gap: 26px;
+  }
+
+  &__application {
+    display: flex;
+    width: 57px;
+    height: 57px;
+    cursor: pointer;
+  }
+
+  &__links-wrapper {
+    grid-area: products;
+    display: flex;
+    gap: 140px;
+  }
+
+  &__products-container {
+    display: flex;
+    gap: 79px;
+  }
+
+  &__product-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &:nth-of-type(1) > img,
+    &:nth-of-type(2) > img {
+      margin: 4px 0;
+    }
+  }
+
+  &__billing-icon {
+    width: 132px;
+  }
+
+  &__billing-icon_meta {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  &__crm-icon {
+    width: 132px;
+  }
+
+  &__kv-icon {
+    width: 161px;
+  }
+
+  &__product-text {
+    @include onestFont($onestH7);
+    line-height: 19px;
+    color: $blueSky50;
+  }
+
+  &__meta {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  &__links-container {
+    display: flex;
+    gap: 140px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+  }
+
+  &__link {
+    @include onestFont($onestH18_1);
+    line-height: 28px;
+    color: $blueSky;
+    text-decoration: underline;
+  }
+
+  &__public-offer-container {
+    grid-area: politic;
+    margin: 107px auto 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__public-offer-link {
+    @include onestFont($onestH7);
+    line-height: 19px;
+    color: $blueSky50;
+  }
+
+  &__bottom-text {
+    @include onestFont($onestH7);
+    line-height: 19px;
+    color: $blueSky50;
+  }
+
+  &__technical-support-container {
+    grid-area: support;
+    margin: 82px 0 0 auto;
+  }
+
+  &__technical-support {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $blueSky;
+    align-self: flex-start;
+  }
+
+  &__plus-icon {
+    display: none;
+  }
+
+  &__technical-support-text {
+    padding: 8px 2px 10px 12px;
+    background-color: $blueSky;
+    @include onestFont($onestH17);
+    line-height: 28px;
+    color: $nightBlue;
+  }
+
+  &__fast-text {
+    @include onestFont($onestH10);
+    line-height: 23px;
+    color: $blueSky;
+    padding: 2px 11px 2px 12px;
+    background-color: $fastText1920;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .footer {
+    padding: 60px 0 40px 0;
+    max-width: 1440px;
+
+    &__text-container {
+      gap: 21px;
+      margin-top: 17px;
+    }
+
+    &__logo {
+      width: 140px;
+    }
+
+    &__top-text {
+      @include onestFont($onestH18);
+      line-height: 28px;
+      max-width: 756px;
+    }
+
+    &__top-right {
+      gap: 42px;
+    }
+
+    &__phone-container {
+      grid-template-columns: auto 136px;
+    }
+
+    &__phone {
+      @include onestFont($onestH34);
+      line-height: 61px;
+      margin-bottom: 4px;
+    }
+
+    &__phone-link {
+      @include onestFont($onestH7_1);
+      line-height: 20px;
+    }
+
+    &__sales-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__sales-link {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      margin-bottom: auto;
+    }
+
+    &__contacts {
+      gap: 14px 114px;
+    }
+
+    &__applications-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__applications {
+      gap: 14px;
+    }
+
+    &__application {
+      width: 41px;
+      height: 41px;
+    }
+
+    &__bottom-left-container {
+      gap: 26px;
+    }
+
+    &__links-wrapper {
+      gap: 94px;
+    }
+
+    &__products-container {
+      gap: 64px;
+    }
+
+    &__product-container {
+      gap: 9px;
+
+      &:nth-of-type(1) > img,
+      &:nth-of-type(2) > img {
+        margin: 3px 0;
+      }
+    }
+
+    &__billing-icon {
+      width: 94px;
+    }
+
+    &__crm-icon {
+      width: 94px;
+    }
+
+    &__kv-icon {
+      width: 114px;
+    }
+
+    &__product-text {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__links-container {
+      gap: 90px;
+    }
+
+    &__links {
+      gap: 15px;
+    }
+
+    &__link {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__public-offer-link {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__bottom-text {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__technical-support-text {
+      padding: 6px 4px 7px 4px;
+      @include onestFont($onestH9);
+      line-height: 20px;
+    }
+
+    &__fast-text {
+      padding: 1px 8px 1px 8px;
+      @include onestFont($onestH3);
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .footer {
+    max-width: 1280px;
+    padding: 40px 0;
+
+    &__text-container {
+      gap: 24px;
+      margin: 0;
+    }
+
+    &__logo {
+      width: 124px;
+    }
+
+    &__top-text {
+      @include onestFont($onestH10);
+      line-height: 23px;
+      max-width: 627px;
+    }
+
+    &__phone-container {
+      grid-template-columns: auto 119px;
+      margin: 0 0 93px auto;
+    }
+
+    &__phone {
+      @include onestFont($onestH30);
+      line-height: 51px;
+    }
+
+    &__phone-link {
+      @include onestFont($onestH46);
+      line-height: 18px;
+    }
+
+    &__contacts {
+      gap: 12px 91px;
+    }
+
+    &__sales-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__sales-link {
+      @include onestFont($onestH46);
+      line-height: 18px;
+    }
+
+    &__applications-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__applications {
+      gap: 14px;
+    }
+
+    &__application {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__links-wrapper {
+      gap: 117px;
+    }
+
+    &__products-container {
+      gap: 51px;
+    }
+
+    &__product-container {
+      gap: 12px;
+
+      &:nth-of-type(1) > img,
+      &:nth-of-type(2) > img {
+        margin: 0;
+      }
+    }
+
+    &__billing-icon {
+      width: 88px;
+    }
+
+    &__crm-icon {
+      width: 88px;
+    }
+
+    &__kv-icon {
+      width: 95px;
+    }
+
+    &__links-container {
+      gap: 60px;
+    }
+
+    &__links {
+      gap: 14px;
+    }
+
+    &__link {
+      @include onestFont($onestH46);
+      line-height: 18px;
+    }
+
+    &__public-offer-container {
+      gap: 14px;
+      margin: 52px auto 0 0;
+    }
+
+    &__public-offer-link {
+      @include onestFont($onestH2);
+      line-height: 13px;
+    }
+
+    &__bottom-text {
+      @include onestFont($onestH2);
+      line-height: 13px;
+    }
+
+    &__technical-support-container {
+      margin: 36px 0 0 auto;
+    }
+
+    &__fast-text {
+      background-color: $fastText1280;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .footer {
+    max-width: 1024px;
+
+    &__top-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 551px;
+    }
+
+    &__phone-container {
+      grid-template-columns: auto 102px;
+      margin: 0 0 97px auto;
+    }
+
+    &__phone {
+      @include onestFont($onestH26);
+      line-height: 41px;
+    }
+
+    &__phone-link {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__contacts {
+      gap: 12px 41px;
+    }
+
+    &__sales-text {
+      @include onestFont($onestH4);
+      line-height: 15px;
+    }
+
+    &__sales-link {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__applications-text {
+      @include onestFont($onestH4);
+      line-height: 15px;
+    }
+
+    &__links-wrapper {
+      gap: 85px;
+    }
+
+    &__products-container {
+      gap: 44px;
+    }
+
+    &__billing-icon {
+      width: 74px;
+    }
+
+    &__crm-icon {
+      width: 73px;
+    }
+
+    &__kv-icon {
+      width: 79px;
+    }
+
+    &__link {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__public-offer-container {
+      margin: 36px auto 0 0;
+    }
+
+    &__technical-support-container {
+      margin: 32px 0 0 auto;
+    }
+
+    &__technical-support-text {
+      padding: 8px 8px 7px 8px;
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__fast-text {
+      padding: 2px 4px;
+      @include onestFont($onestH2);
+      line-height: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer {
+    max-width: 768px;
+
+    &__top-text {
+      max-width: 395px;
+    }
+
+    &__phone-container {
+      margin: 0 0 88px auto;
+    }
+
+    &__products-container {
+      display: none;
+    }
+
+    &__public-offer-container {
+      margin: 40px auto 0 0;
+      gap: 16px;
+    }
+
+    &__technical-support-container {
+      margin: 40px 0 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 0 16px 0;
+    max-width: 363px;
+    grid-template-areas:
+    "text text"
+    "support support"
+    "phone phone"
+    "products contacts"
+    'politic politic';
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(5, auto);
+
+    &__text-container {
+      gap: 22px;
+    }
+
+    &__logo {
+      width: 138px;
+    }
+
+    &__top-text {
+      @include onestFont($onestH18);
+      line-height: 28px;
+      max-width: 361px;
+    }
+
+    &__phone-container {
+      grid-template-columns: 1fr;
+      margin: 0 0 52px auto;
+    }
+
+    &__phone {
+      @include onestFont($onestH29);
+      line-height: 50px;
+      text-align: end;
+      width: 100%;
+      display: block;
+    }
+
+    &__phone-link {
+      @include onestFont($onestH7_1);
+      line-height: 19px;
+      text-align: end;
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+
+    &__contacts {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      gap: 0;
+    }
+
+    &__sales-text {
+      grid-row: 1 / 2;
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__sales-link {
+      grid-row: 2 / 3;
+      margin: 12px 0 36px 0;
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__applications-text {
+      grid-row: 3 / 4;
+      margin-bottom: 12px;
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__applications {
+      grid-row: 4 / 5;
+      gap: 16px;
+    }
+
+    &__application {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__links-container {
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    &__link {
+      @include onestFont($onestH7_1_2);
+      line-height: 20px;
+    }
+
+    &__technical-support-container {
+      margin: 2px auto 23px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__plus-icon {
+      display: flex;
+      width: 55px;
+      height: 55px;
+    }
+
+    &__technical-support-text {
+      @include onestFont($onestH9);
+      line-height: 20px;
+      padding: 5px 12px 8px 12px;
+    }
+
+    &__fast-text {
+      padding: 3px 16px 1px 16px;
+      @include onestFont($onestH3);
+      line-height: 16px;
+    }
+
+    &__public-offer-container {
+      margin: 52px auto 0 0;
+      gap: 10px;
+    }
+
+    &__public-offer-link {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__bottom-text {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .footer {
+    &__phone {
+      @include onestFont($onestH26);
+      line-height: 42px;
+    }
+  }
+}

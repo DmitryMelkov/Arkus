@@ -1,0 +1,407 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.manager {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 132px 0;
+  gap: 0 20px;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  &__wrapper {
+    width: 100%;
+    background: $gradientPersonalManager;
+  }
+
+  &__title {
+    grid-column: 1 / 3;
+    font: $involveH10_1;
+    line-height: 88px;
+    color: $kvartplataGreen;
+  }
+
+  &__text {
+    grid-column: 1 / 3;
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $blueSky;
+    margin: 50px 0 90px 0;
+  }
+
+  &__subtitle {
+    grid-column: 1 / 3;
+    @include onestFont($onestH33);
+    line-height: 57px;
+    color: $blueSky50;
+  }
+
+  &__centre-container {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 62px 0 142px 0;
+  }
+
+  &__stages {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 170px;
+  }
+
+  &__item-number {
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $snowWhite;
+
+    &_span {
+      font-size: 24px;
+      line-height: 34px;
+      color: $snowWhite50;
+    }
+  }
+
+  &__item-text {
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $snowWhite;
+  }
+
+  &__line-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 24px;
+  }
+
+  &__line {
+    width: 100%;
+    height: 8px;
+    background: $gradientLine;
+    border-radius: 10px;
+  }
+
+  &__point {
+    position: absolute;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $kvartplataGreen;
+    margin-left: auto;
+    box-shadow: 0 0 98px 40px $kvartplataGreen;
+  }
+
+  &__bottom-text-container {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__bottom-title {
+    @include onestFont($onestH33);
+    line-height: 57px;
+    color: $snowWhite;
+
+    &_span {
+      color: $kvartplataGreen;
+    }
+  }
+
+  &__bottom-text {
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $blueSky;
+  }
+
+  &__arkus-icon {
+    grid-column: 3 / 4;
+    width: 120px;
+    margin: auto 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .manager {
+    max-width: 1440px;
+    padding: 128px 0;
+
+    &__title {
+      font: $involveH7;
+      font-weight: 500;
+      line-height: 62px;
+    }
+
+    &__text {
+      @include onestFont($onestH12);
+      line-height: 26px;
+      margin: 24px 0 62px 0;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH26);
+      line-height: 41px;
+    }
+
+    &__centre-container {
+      gap: 32px;
+      margin: 47px 0 114px 0;
+    }
+
+    &__item {
+      gap: 14px;
+      max-width: 130px;
+    }
+
+    &__item-number {
+      @include onestFont($onestH12);
+      line-height: 26px;
+
+      &_span {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &__item-text {
+      @include onestFont($onestH12);
+      line-height: 26px;
+    }
+
+    &__line-container {
+      height: 18px;
+    }
+
+    &__line {
+      height: 6px;
+    }
+
+    &__point {
+      right: -9px;
+      width: 18px;
+      height: 18px;
+      box-shadow: 0 0 74px 30px $kvartplataGreen;
+    }
+
+    &__bottom-text-container {
+      gap: 24px;
+    }
+
+    &__bottom-title {
+      @include onestFont($onestH26);
+      line-height: 41px;
+    }
+
+    &__bottom-text {
+      @include onestFont($onestH10);
+      line-height: 23px;
+    }
+
+    &__arkus-icon {
+      width: 91px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .manager {
+    max-width: 1240px;
+    padding: 80px 0;
+
+    &__title {
+      font: $involveH14;
+      line-height: 46px;
+    }
+
+    &__text {
+      @include onestFont($onestH10);
+      line-height: 23px;
+      margin: 28px 0 52px 0;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH22);
+      line-height: 31px;
+    }
+
+    &__centre-container {
+      gap: 24px;
+      margin: 32px 0 80px 0;
+    }
+
+    &__item {
+      gap: 12px;
+      max-width: 109px;
+    }
+
+    &__item-number {
+      @include onestFont($onestH7);
+      line-height: 20px;
+
+      &_span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    &__item-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__bottom-text-container {
+      gap: 12px;
+    }
+
+    &__bottom-title {
+      @include onestFont($onestH22);
+      line-height: 31px;
+    }
+
+    &__bottom-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__arkus-icon {
+      width: 78px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .manager {
+    max-width: 984px;
+
+    &__text {
+      margin: 20px 0 42px 0;
+    }
+
+    &__centre-container {
+      margin: 52px 0 72px 0;
+    }
+
+    &__arkus-icon {
+      width: 76px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .manager {
+    max-width: 728px;
+    grid-template-columns: 1fr;
+
+    &__centre-container {
+      margin: 32px 0 56px 0;
+    }
+
+    &__item {
+      max-width: 96px;
+    }
+
+    &__item-number {
+      @include onestFont($onestH5);
+      line-height: 18px;
+
+       &_span {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    &__item-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .manager {
+    max-width: 363px;
+    padding: 40px 0;
+
+    &__wrapper {
+      background: $oceanBlue;
+    }
+
+    &__title {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    &__text {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      max-width: 361px;
+    }
+
+    &__subtitle {
+      display: none;
+    }
+
+    &__centre-container {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      gap: unset;
+      margin: 52px 0;
+    }
+
+    &__stages {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__item {
+      gap: 10px;
+      max-width: unset;
+    }
+
+    &__item-number {
+      @include onestFont($onestH10);
+      line-height: 23px;
+
+      &_span {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &__item-text {
+      @include onestFont($onestH20);
+      line-height: 29px;
+    }
+
+    &__line-container {
+      display: none;
+    }
+
+    &__bottom-text-container {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      gap: unset;
+    }
+
+    &__bottom-title {
+      font: $involveH4;
+      line-height: 43px;
+    }
+
+    &__bottom-text {
+      display: none;
+    }
+
+    &__arkus-icon {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"version": "1.2",
+	"api_version": 3,
+	"layout": {
+		"logo": "https://аркус.рф/favicons/png/arkustableu.png",
+		"color": "#0166FF",
+		"show_title": "none"
+	}
+}

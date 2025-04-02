@@ -1,0 +1,4 @@
+@mixin onestFont($font) {
+  font: $font;
+  font-feature-settings: 'ss02';
+}

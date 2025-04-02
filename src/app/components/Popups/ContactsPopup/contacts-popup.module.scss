@@ -1,0 +1,314 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.popup {
+  position: relative;
+  padding: 26px 26px 33px 26px;
+  display: flex;
+  flex-direction: column;
+  max-width: 728px;
+  gap: 20px;
+  width: 100%;
+  background: $backgroundGradientPopup;
+  z-index: 1000;
+  border-top: 10px solid $oceanBlue;
+  border-bottom: 10px solid $oceanBlue;
+
+  &__close {
+    margin-top: 5px;
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__mobile-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $blueSky50;
+    height: 55px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font: $involveH5;
+    line-height: 52px;
+    text-wrap: nowrap;
+    color: $oceanBlue;
+
+    &_span {
+      color: $oceanBlue50;
+    }
+  }
+
+  &__mobile-br {
+    display: none;
+  }
+
+  &__center {
+    display: flex;
+    align-items: end;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+  }
+
+  &__subtitle {
+    @include onestFont($onestH12);
+    line-height: 26px;
+    color: $electricBlue;
+    margin-bottom: 18px;
+
+    &-span-sm {
+      display: none;
+    }
+
+    &-findOut {
+      display: none;
+      font: $onestH12;
+      color: $oceanBlue;
+      text-align: center;
+      margin: 38px auto 22px;
+    }
+  }
+
+  &__description {
+    @include onestFont($onestH7);
+    line-height: 20px;
+    color: $nightBlue50;
+
+    max-width: 420px;
+    margin-bottom: 40px;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+
+    &-title {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      color: $electricBlue;
+
+      margin-right: 32px;
+      max-width: 176px;
+    }
+
+    &-icons {
+      display: flex;
+      gap: 16px;
+    }
+
+    &-icon {
+      display: block;
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__right {
+    max-width: 196px;
+  }
+
+  &__month {
+    margin-bottom: 33px;
+
+    &-title {
+      @include onestFont($onestH37);
+      line-height: 75px;
+      color: transparent;
+      background-color: $electricBlue50;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-shadow: 0 0 4px rgba(0, 57, 144, 0.1);
+      text-align: start;
+    }
+
+    &-text {
+      @include onestFont($onestH25);
+      line-height: 35px;
+      text-align: start;
+      color: transparent;
+      background-color: $electricBlue50;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-shadow: 0 0 4px rgba(0, 57, 144, 0.1);
+    }
+  }
+
+  &__right-text {
+    max-width: 163px;
+    margin-left: 6px;
+    @include onestFont($onestH3);
+    line-height: 15px;
+    color: $nightBlue50;
+
+    &_span {
+      color: $electricBlue;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    padding-top: 85px;
+    gap: 16px;
+
+    background: $backgroundGradient;
+
+    &__close {
+      position: absolute;
+      top: 11px;
+      right: 19px;
+    }
+
+    &__mobile-top {
+      display: block;
+    }
+
+    &__title {
+      font: $involveH4;
+      line-height: 43px;
+    }
+
+    &__center {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &__left {
+      width: 100%;
+    }
+
+    &__subtitle {
+      margin-bottom: 0;
+
+      &-span-lg {
+        display: none;
+      }
+
+      &-span-sm {
+        display: block;
+        max-width: 315px;
+      }
+
+      &-findOut {
+        display: block;
+      }
+    }
+
+    &__contacts {
+      flex-direction: column;
+      gap: 30px;
+
+      &-title {
+        text-align: center;
+        margin: 0;
+      }
+
+      &-icons {
+        gap: 30px;
+      }
+
+      &-icon {
+        width: 71px;
+        height: 71px;
+      }
+    }
+
+    &__description {
+      display: none;
+    }
+
+    &__right {
+      margin-left: 0;
+      max-width: 100%;
+    }
+
+    &__month {
+      margin-bottom: 23px;
+
+      &-title {
+        text-align: center;
+      }
+
+      &-text {
+        text-align: center;
+      }
+    }
+
+    &__right-text {
+      margin-left: 0;
+      max-width: 330px;
+    }
+
+    &__mobile-br {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .popup {
+    padding: 68px 14px 48px;
+
+    &__close {
+      top: 7px;
+      right: 15px;
+
+      width: 20px;
+      height: 20px;
+    }
+
+    &__mobile-top {
+      height: 42px;
+    }
+
+    &__title {
+      font: $involveH2_1;
+      line-height: 30px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH7);
+
+      &-span-sm {
+        max-width: 250px;
+      }
+
+      &-findOut {
+        margin-top: 45px;
+      }
+    }
+
+    &__contacts {
+      gap: 26px;
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+}

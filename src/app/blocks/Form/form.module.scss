@@ -1,0 +1,680 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.form {
+  padding: 90px 0 62px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  &__line {
+    width: 100%;
+    height: 19px;
+    background-position: top left;
+    background-image: url('/images/form/line1920.svg');
+  }
+
+  &__wrapper {
+    width: 100%;
+    background-color: $blueSky;
+    margin-top: -1px;
+  }
+
+  &__title {
+    font: $involveH13;
+    line-height: 80px;
+    color: $oceanBlue;
+
+    &_span {
+      color: $oceanBlue50;
+    }
+  }
+
+  &__mobile-br {
+    display: none;
+  }
+
+  &__center-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 49px 0 63px 0;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+
+  &__subtitle {
+    @include onestFont($onestH33);
+    line-height: 57px;
+    color: $electricBlue;
+  }
+
+  &__subtitle-mobile-br {
+    display: none;
+  }
+
+  &__mobile-text-container {
+    display: none;
+  }
+
+  &__text {
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $nightBlue50;
+    max-width: 704px;
+  }
+
+  &__right-text-container {
+    width: 245px;
+    height: 149px;
+    margin-top: auto;
+    margin-right: 134px;
+  }
+
+  &__right-text-1 {
+    @include onestFont($onestH42);
+    line-height: 150px;
+    color: transparent;
+    background-color: $electricBlue50;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 4px rgba(0, 57, 144, 0.1);
+  }
+
+  &__right-text-2 {
+    @include onestFont($onestH33);
+    line-height: 57px;
+    text-align: center;
+    color: transparent;
+    background-color: $electricBlue50;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 4px rgba(0, 57, 144, 0.1);
+  }
+
+  &__bottom-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    gap: 19px;
+  }
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    gap: 26px;
+  }
+
+  &__input-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  &__input-error {
+    position: absolute;
+    top: 66px;
+    @include onestFont($onestH5);
+    line-height: 18px;
+    color: $error;
+  }
+
+  &__input {
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid $oceanBlue70;
+    padding: 11px 10px 12px 10px;
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $oceanBlue;
+
+    &:focus {
+      outline: 2px solid $oceanBlue;
+    }
+
+    &::placeholder {
+      @include onestFont($onestH25);
+      line-height: 36px;
+      color: $oceanBlue20;
+    }
+  }
+
+  &__mobile-container {
+    display: none;
+  }
+
+  &__button {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    @include onestFont($onestH15);
+    line-height: 27px;
+    color: $blueSky;
+    border-radius: 44px;
+    background-color: $electricBlue;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: $electricBlue50;
+      cursor: auto;
+    }
+  }
+
+  &__form-bottom-container {
+    display: flex;
+    // justify-content: space-between;
+    justify-content: flex-end;
+  }
+
+  &__form-bottom-text {
+    @include onestFont($onestH18);
+    line-height: 28px;
+    color: $nightBlue50;
+
+    &_span {
+      color: $electricBlue;
+    }
+  }
+
+  &__confirm-container {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-right: 73px;
+  }
+
+  &__confirm-checkbox-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__confirm-checkbox {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__confirm-checkbox-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $snowWhite;
+    border: 1px solid $nightBlue50;
+    cursor: pointer;
+  }
+
+  &__confirm-text {
+    @include onestFont($onestH10);
+    line-height: 23px;
+    color: $nightBlue50;
+    max-width: 459px;
+
+    &_link {
+      color: $oceanBlue70;
+      text-decoration: underline;
+    }
+  }
+}
+
+.form__confirm-checkbox:checked~.form__confirm-checkbox-custom {
+  background-image: url('../../../../public/images/icons/checkboxConfirm.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1920px) {
+  .form {
+    padding: 90px 0;
+    max-width: 1440px;
+
+    &__title {
+      font: $involveH6;
+      line-height: 64px;
+    }
+
+    &__center-container {
+      margin: 28px 0 62px 0;
+    }
+
+    &__text-container {
+      gap: 48px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH26);
+      line-height: 41px;
+    }
+
+    &__text {
+      @include onestFont($onestH12);
+      line-height: 26px;
+      max-width: 499px;
+    }
+
+    &__right-text-container {
+      margin-top: 5px;
+      margin-right: 111px;
+    }
+
+    &__right-text-1 {
+      @include onestFont($onestH41);
+      line-height: 107px;
+    }
+
+    &__right-text-2 {
+      @include onestFont($onestH28);
+      line-height: 42px;
+    }
+
+    &__bottom-container {
+      gap: 21px;
+    }
+
+    &__form {
+      gap: 21px;
+    }
+
+    &__inputs {
+      gap: 16px;
+    }
+
+    &__input {
+      padding: 16px 10px;
+      @include onestFont($onestH12);
+      line-height: 26px;
+
+      &::placeholder {
+        @include onestFont($onestH12);
+        line-height: 26px;
+      }
+    }
+
+    &__input-error {
+      top: 64px;
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__button {
+      max-width: 467px;
+      padding: 21px 0;
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__form-bottom-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      margin-top: 20px;
+    }
+
+    &__confirm-container {
+      gap: 16px;
+      margin-right: 93px;
+    }
+
+    &__confirm-checkbox-container {
+      width: 22px;
+      height: 22px;
+    }
+
+    &__confirm-checkbox-custom {
+      width: 22px;
+      height: 22px;
+    }
+
+    &__confirm-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+      max-width: 335px;
+    }
+  }
+
+  .form__confirm-checkbox:checked~.form__confirm-checkbox-custom {
+    background-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .form {
+    padding: 26px 0 90px 0;
+    max-width: 1240px;
+
+    &__line {
+      background-image: url('/images/form/line1280.svg');
+      height: 14px;
+    }
+
+    &__title {
+      font: $involveH5;
+      line-height: 52px;
+    }
+
+    &__center-container {
+      margin: 28px 0 52px 0;
+    }
+
+    &__text-container {
+      gap: 38px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH25);
+      line-height: 36px;
+    }
+
+    &__text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 399px;
+    }
+
+    &__right-text-container {
+      margin-top: -19px;
+      margin-right: 77px;
+    }
+
+    &__bottom-container {
+      gap: 19px;
+    }
+
+    &__form {
+      gap: 20px;
+    }
+
+    &__inputs {
+      gap: 14px;
+    }
+
+    &__input {
+      padding: 13px 10px;
+      @include onestFont($onestH7);
+      line-height: 20px;
+
+      &::placeholder {
+        @include onestFont($onestH7);
+        line-height: 20px;
+      }
+    }
+
+    &__input-error {
+      top: 56px;
+      @include onestFont($onestH2);
+      line-height: 13px;
+    }
+
+    &__button {
+      max-width: 400px;
+      padding: 14px 0;
+      @include onestFont($onestH6);
+      line-height: 18px;
+    }
+
+    &__form-bottom-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+      margin-top: 18px;
+    }
+
+    &__confirm-container {
+      gap: 11px;
+      margin-right: 60px;
+    }
+
+    &__confirm-checkbox-container {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__confirm-checkbox-custom {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__confirm-text {
+      @include onestFont($onestH3);
+      line-height: 15px;
+      max-width: 305px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .form {
+    padding: 30px 0 40px 0;
+    max-width: 1024px;
+
+    &__line {
+      height: 11px;
+      background-image: url('/images/form/line1024.svg');
+    }
+
+    &__right-text-container {
+      margin-right: 35px;
+    }
+
+    &__inputs {
+      gap: 11px;
+    }
+
+    &__button {
+      max-width: 315px;
+    }
+
+    &__confirm-container {
+      margin-right: 12px;
+    }
+
+    &__confirm-text {
+      max-width: 268px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .form {
+    max-width: 768px;
+
+    &__text-container {
+      gap: 48px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH22);
+      line-height: 31px;
+    }
+
+    &__subtitle-desktop-br {
+      display: none;
+    }
+
+    &__subtitle-mobile-br {
+      display: flex;
+    }
+
+    &__right-text-container {
+      width: 189px;
+      height: 115px;
+      margin-top: 38px;
+      margin-right: 19px;
+    }
+
+    &__bottom-container {
+      gap: 12px;
+    }
+
+    &__form {
+      display: grid;
+      grid-template-areas:
+        'input input'
+        'text button';
+      grid-template-rows: 46px 46px;
+      gap: 28px 0;
+    }
+
+    &__inputs {
+      grid-area: input;
+      gap: 13px;
+    }
+
+    &__mobile-container {
+      grid-area: text;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__mobile-button-up-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+      color: $nightBlue50;
+      max-width: 379px;
+
+      &_span {
+        color: $electricBlue;
+      }
+    }
+
+    &__button {
+      grid-area: button;
+      width: 315px;
+      margin-left: auto;
+    }
+
+    &__form-bottom-text {
+      display: none;
+    }
+
+    &__confirm-container {
+      margin: 0 12px 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    max-width: 393px;
+    margin: 0 auto;
+    padding: 30px 15px 40px 15px;
+
+    &__title {
+      font: $involveH4;
+      line-height: 43px;
+    }
+
+    &__mobile-br {
+      display: flex;
+    }
+
+    &__center-container {
+      margin: 32px 0 24px 0;
+    }
+
+    &__text-container {
+      gap: 24px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH10);
+      line-height: 23px;
+    }
+
+    &__text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 325px;
+    }
+
+    &__right-text-container {
+      display: none;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__mobile-text-container {
+      display: flex;
+      width: 207px;
+      height: 126px;
+      margin: 0 auto 35px auto;
+    }
+
+    &__inputs {
+      flex-direction: column;
+      gap: 12px;
+      align-items: unset;
+    }
+
+    &__input-container {
+      width: auto;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    &__input-error {
+      top: 45px;
+    }
+
+    &__input {
+      width: auto;
+    }
+
+    &__mobile-container {
+      margin: 18px 0 52px 0;
+    }
+
+    &__button {
+      max-width: unset;
+      width: 100%;
+      padding: 20px 0;
+      @include onestFont($onestH7);
+      line-height: 20px;
+      border-radius: 30px;
+    }
+
+    &__form-bottom-text {
+      display: none;
+    }
+
+    &__bottom-container {
+      gap: 18px;
+    }
+
+    &__confirm-container {
+      margin: 0;
+    }
+
+    &__confirm-checkbox-container {
+      display: none;
+    }
+
+    &__confirm-text {
+      @include onestFont($onestH2);
+      line-height: 13px;
+      max-width: 240px;
+      color: $nightBlue50;
+    }
+  }
+}

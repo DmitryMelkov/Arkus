@@ -1,0 +1,558 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.crm {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, auto);
+	grid-template-areas:
+		'title title subtitle'
+		'text text2 card'
+		'card2 card3 card4'
+		'graph graph graph'
+		'details details details';
+	gap: 0 20px;
+	max-width: 1920px;
+	width: 100%;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 88px;
+	}
+
+	&__mobile-menu {
+		display: none;
+	}
+
+	&__title {
+		grid-area: title;
+		font: $involveH10_1;
+		line-height: 81px;
+		color: $crm;
+
+		&_span {
+			color: $nightBlue50;
+		}
+	}
+
+	&__subtitle {
+		grid-area: subtitle;
+		@include onestFont($onestH25);
+		line-height: 36px;
+		color: $crm;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $crm40;
+		padding-right: 90px;
+		margin-bottom: 100px;
+	}
+
+	&__mobile-graph-container {
+		display: none;
+	}
+
+	&__text-container {
+		grid-area: text;
+		display: flex;
+		flex-direction: column;
+		gap: 22px;
+		margin-bottom: 44px;
+
+		&_2 {
+			grid-area: text2;
+		}
+	}
+
+	&__card-title {
+		@include onestFont($onestH23);
+		line-height: 34px;
+		color: $oceanBlue;
+		text-transform: uppercase;
+	}
+
+	&__card-subtitle {
+		@include onestFont($onestH16);
+		line-height: 28px;
+		color: $oceanBlue50;
+	}
+
+	&__mobile-br {
+		display: none;
+	}
+
+	&__icon-card {
+		grid-area: card;
+		display: flex;
+		gap: 16px;
+
+		&_2 {
+			grid-area: card2;
+		}
+
+		&_3 {
+			grid-area: card3;
+		}
+
+		&_4 {
+			grid-area: card4;
+		}
+
+		&_margin-top {
+			align-self: flex-end;
+			margin-bottom: 44px;
+		}
+	}
+
+	&__icon-container {
+		width: 78px;
+		height: 78px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $crm16;
+	}
+
+	&__icon {
+		width: 38px;
+		height: 38px;
+	}
+
+	&__icon-card-text {
+		@include onestFont($onestH16);
+		line-height: 27px;
+		color: $nightBlue50;
+	}
+
+	&__graph-container {
+		position: relative;
+		grid-area: graph;
+		margin-top: 49px;
+	}
+
+	&__graph-title {
+		position: absolute;
+		top: 29px;
+		right: 603px;
+		@include onestFont($onestH16);
+		line-height: 27px;
+		color: $crm;
+	}
+
+	&__graph-text {
+		position: absolute;
+		top: 55px;
+		right: 146px;
+		@include onestFont($onestH42);
+		line-height: 130px;
+		color: $crm;
+	}
+
+	&__graph {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__details {
+		grid-area: details;
+	}
+
+	&__details-text {
+		display: none;
+	}
+
+	&__details-list {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	.crm {
+		max-width: 1440px;
+
+		&__title {
+			font: $involveH7;
+			font-weight: 500;
+			line-height: 62px;
+		}
+
+		&__subtitle {
+			@include onestFont($onestH17);
+			line-height: 28px;
+			padding: 0 0 20px 0;
+		}
+
+		&__card-title {
+			@include onestFont($onestH14);
+			line-height: 26px;
+		}
+
+		&__card-subtitle {
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+
+		&__icon-card-text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+
+		&__graph-title {
+			@include onestFont($onestH7);
+			line-height: 20px;
+			top: 1px;
+			right: 487px;
+		}
+
+		&__graph-text {
+			@include onestFont($onestH40);
+			line-height: 107px;
+			top: 22px;
+			right: 122px;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.crm {
+		max-width: 1240px;
+
+		&__wrapper {
+			gap: 40px;
+		}
+
+		&__title {
+			font: $involveH5;
+			font-weight: 500;
+			line-height: 46px;
+		}
+
+		&__subtitle {
+			@include onestFont($onestH10);
+			line-height: 23px;
+			padding-bottom: 14px;
+			margin-bottom: 59px;
+		}
+
+		&__text-container {
+			gap: 14px;
+			margin-bottom: 24px;
+		}
+
+		&__card-title {
+			@include onestFont($onestH11);
+			font-weight: 500;
+			line-height: 23px;
+
+			&_br {
+				display: none;
+			}
+		}
+
+		&__card-subtitle {
+			@include onestFont($onestH5);
+			line-height: 18px;
+		}
+
+		&__icon-card {
+			gap: 14px;
+
+			&_margin-top {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__icon-container {
+			width: 52px;
+			height: 52px;
+		}
+
+		&__icon {
+			width: 26px;
+			height: 26px;
+		}
+
+		&__icon-card-text {
+			@include onestFont($onestH5);
+			line-height: 18px;
+		}
+
+		&__graph-container {
+			margin-top: 40px;
+		}
+
+		&__graph-title {
+			top: 0;
+			right: 420px;
+			@include onestFont($onestH3);
+			line-height: 15px;
+		}
+
+		&__graph-text {
+			top: 17px;
+			right: 102px;
+			@include onestFont($onestH38);
+			line-height: 85px;
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.crm {
+		max-width: 984px;
+
+		&__subtitle {
+			padding: 0 0 14px 0;
+		}
+
+		&__card-title {
+			&_br {
+				display: block;
+			}
+		}
+
+		&__br {
+			display: none;
+		}
+
+		&__graph-container {
+			margin-top: 64px;
+		}
+
+		&__graph-title {
+			top: -16px;
+			right: 335px;
+		}
+
+		&__graph-text {
+			top: 15px;
+			right: 84px;
+			@include onestFont($onestH35);
+			line-height: 66px;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.crm {
+		max-width: 728px;
+		grid-template-areas:
+			'title title'
+			'subtitle subtitle'
+			'text text'
+			'text2 text2'
+			'card card2'
+			'card3 card4'
+			'graph graph'
+			'details details';
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: unset;
+
+		&__subtitle {
+			padding: 0;
+			margin: 38px 0 40px 0;
+			max-width: 647px;
+			border: unset;
+		}
+
+		&__desktop-br {
+			display: none;
+		}
+
+		&__card-title {
+			&_br {
+				display: none;
+			}
+		}
+
+		&__text-container {
+			margin-bottom: 28px;
+
+			&_2 {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__mobile-br {
+			display: flex;
+		}
+
+		&__icon-card {
+			margin-bottom: 40px;
+		}
+
+		&__icon-container {
+			min-width: 52px;
+			min-height: 52px;
+		}
+
+		&__graph-container {
+			margin-top: 30px;
+		}
+
+		&__graph-title {
+			top: 0;
+			right: 210px;
+		}
+
+		&__graph-text {
+			top: 20px;
+			right: 58px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.crm {
+		margin: 0 auto 90px auto;
+		max-width: 395px;
+		padding: 0 16px;
+		grid-template-areas:
+			'title'
+			'subtitle'
+			'graph'
+			'text'
+			'text2'
+			'card'
+			'card2'
+			'card3'
+			'card4'
+			'details';
+		grid-template-columns: 1fr;
+
+		&__title {
+			font: $involveH2_1;
+			font-size: 22px;
+			line-height: 29px;
+			max-width: 307px;
+		}
+
+		&__mobile-br {
+			display: none;
+		}
+
+		&__subtitle {
+			@include onestFont($onestH10);
+			line-height: 23px;
+			padding: 0;
+			border-bottom: unset;
+			margin: 32px 0 40px 0;
+			max-width: 345px;
+		}
+
+		&__mobile-graph-container {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			margin: 0 0 52px 0;
+		}
+
+		&__mobile-graph {
+			width: 100%;
+			max-width: 363px;
+		}
+
+		&__mobile-graph-text {
+			@include onestFont($onestH30);
+			line-height: 51px;
+			color: $crm;
+			position: absolute;
+			top: 2px;
+			right: 17%;
+		}
+
+		&__mobile-graph-title {
+			@include onestFont($onestH3);
+			line-height: 15px;
+			color: $crm;
+		}
+
+		&__text-container {
+			gap: 15px;
+			margin-bottom: 32px;
+		}
+
+		&__card-title {
+			@include onestFont($onestH9);
+			line-height: 20px;
+		}
+
+		&__card-subtitle {
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+
+		&__icon-card {
+			gap: 12px;
+
+			&_margin-top {
+				margin-top: 20px;
+			}
+
+			&_bottom-margin {
+				margin-bottom: 52px;
+			}
+		}
+
+		&__icon-container {
+			width: 54px;
+			height: 54px;
+			min-width: 54px;
+			min-height: 54px;
+		}
+
+		&__icon {
+			width: 27px;
+		}
+
+		&__icon-card-text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+
+		&__bottom-cards-container {
+			flex-direction: column;
+			gap: 19px;
+		}
+
+		&__graph-container {
+			display: none;
+		}
+
+		&__details {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__details-text {
+			display: inline;
+			@include onestFont($onestH10);
+			line-height: 23px;
+			max-width: 361px;
+			color: $crm;
+		}
+
+		&__details-list {
+			display: flex;
+			flex-direction: column;
+			gap: 19px;
+			margin-top: 40px;
+		}
+
+		&__details-item {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+
+		&__item-check {
+			width: 16px;
+			height: 16px;
+		}
+
+		&__item-text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+			color: $nightBlue50;
+		}
+	}
+}

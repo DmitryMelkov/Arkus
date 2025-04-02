@@ -1,0 +1,138 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.cookie {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1956px;
+	margin: 0 auto;
+	padding: 17px 0;
+
+	&__wrapper {
+		position: fixed;
+		z-index: 99999;
+		bottom: 0;
+		width: 100%;
+		background-color: $cookie;
+
+		&_hide {
+			display: none;
+			bottom: -1000px;
+			left: -1000px;
+		}
+	}
+
+	&__text {
+		@include onestFont($onestH18);
+		line-height: 28px;
+		color: $nightBlue;
+		text-wrap: nowrap;
+	}
+
+  &__text-br {
+    display: none;
+  }
+
+	&__button {
+		background-color: $nightBlue50;
+		border-radius: 27px;
+		padding: 13px 80px;
+		@include onestFont($onestH10);
+		line-height: 23px;
+		color: $snowWhite;
+		cursor: pointer;
+		transition: $btnTransition;
+
+		&:hover {
+			background-color: $oceanBlue;
+		}
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	.cookie {
+		max-width: 1440px;
+		padding: 13px 0;
+
+		&__text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+
+		&__button {
+			border-radius: 20px;
+			padding: 10px 60px;
+			@include onestFont($onestH5);
+			line-height: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.cookie {
+		max-width: 1240px;
+
+		&__text {
+			@include onestFont($onestH5);
+			line-height: 18px;
+		}
+
+		&__button {
+			padding: 7px 57px;
+			@include onestFont($onestH4);
+			line-height: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.cookie {
+		max-width: 984px;
+
+		&__text {
+			@include onestFont($onestH2);
+			line-height: 13px;
+		}
+
+		&__button {
+			padding: 8px 61px;
+			@include onestFont($onestH2);
+			line-height: 13px;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.cookie {
+		max-width: 728px;
+
+		&__text {
+			max-width: 503px;
+			text-wrap: wrap;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.cookie {
+		max-width: 361px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 0;
+
+    &__text {
+			max-width: 347px;
+		}
+
+    &__text-br {
+      display: flex;
+    }
+
+    &__button {
+			padding: 7px 57px;
+			@include onestFont($onestH3);
+			line-height: 15px;
+		}
+	}
+}

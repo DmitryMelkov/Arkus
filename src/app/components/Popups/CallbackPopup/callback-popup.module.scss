@@ -1,0 +1,261 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.popup {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 29px;
+  padding: 37px 0 24px 0;
+  background-color: $blueSky;
+  border-bottom: 13px solid $oceanBlue;
+  position: relative;
+
+  &_consultation-mode {
+    max-width: 502px;
+    border-top: 15px solid $oceanBlue;
+    border-bottom: 15px solid $oceanBlue;
+    padding: 41px 0 94px 0;
+    gap: 45px;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+    cursor: pointer;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__mobile-container {
+    display: none;
+    flex-direction: column;
+    align-self: start;
+    margin-left: 35px;
+  }
+
+  &__consultation-mode {
+    display: flex;
+  }
+
+  &__mobile-logo {
+    width: 120px;
+  }
+
+  &__mobile-title {
+    margin: 49px 0 30px 0;
+    font: $involveH32;
+    line-height: 60px;
+    color: $oceanBlue;
+  }
+
+  &__mobile-subtitle {
+    @include onestFont($onestH23);
+    line-height: 37px;
+    color: $electricBlue;
+    max-width: 445px;
+  }
+
+  &__mobile-text {
+    @include onestFont($onestH12);
+    line-height: 26px;
+    color: $oceanBlue70;
+    max-width: 445px;
+    margin-top: 42px;
+  }
+
+  &__input {
+    padding: 14px 16px;
+    border-bottom: 1px solid $oceanBlue;
+    background-color: $snowWhite;
+    @include onestFont($onestH12);
+    line-height: 26px;
+    color: $oceanBlue;
+    width: 100%;
+    max-width: 445px;
+    box-sizing: border-box;
+
+    &:focus {
+			outline: 2px solid $oceanBlue;
+		}
+
+    &::placeholder {
+      @include onestFont($onestH12);
+      line-height: 26px;
+      color: $oceanBlue20;
+    }
+
+    &_consultation-mode {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__button {
+    padding: 24px 0;
+    max-width: 467px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 34px;
+    background-color: $electricBlue;
+    @include onestFont($onestH9);
+    line-height: 20px;
+    color: $blueSky;
+
+    &:disabled {
+      background-color: $electricBlue50;
+    }
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .popup {
+    max-width: 416px;
+    gap: 20px;
+    padding: 26px 0 17px 0;
+    border-bottom: 9px solid $oceanBlue;
+
+    &_consultation-mode {
+      gap: 33px;
+      max-width: 371px;
+      padding: 30px 0 69px 0;
+      border-top: 11px solid $oceanBlue;
+      border-bottom: 11px solid $oceanBlue;
+    }
+
+
+    &__close-button {
+      top: 12px;
+      right: 12px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &__mobile-logo {
+      width: 89px;
+    }
+
+    &__mobile-title {
+      margin: 36px 0 23px 0;
+      font: $involveH4;
+      line-height: 44px;
+    }
+
+    &__mobile-subtitle {
+      @include onestFont($onestH12);
+      line-height: 26px;
+      max-width: 329px;
+    }
+
+    &__mobile-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 329px;
+      margin-top: 34px;
+    }
+
+    &__input {
+      padding: 10px 11px 8px 11px;
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 309px;
+
+      &::placeholder {
+        @include onestFont($onestH7);
+        line-height: 20px;
+      }
+
+      &_consultation-mode {
+        margin-bottom: 10px;
+        max-width: 329px;
+      }
+    }
+
+    &__button {
+      padding: 15px 0;
+      max-width: 324px;
+      border-radius: 24px;
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    border-top: 8px solid $oceanBlue;
+    border-bottom: 8px solid $oceanBlue;
+    padding: 20px 0 67px 0;
+    max-width: unset;
+    gap: 24px;
+
+    &__close-button {
+      top: 11px;
+      right: 15px;
+
+      img {
+        width: 19px;
+        height: 19px;
+      }
+    }
+
+    &__mobile-container {
+      display: flex;
+      margin-left: 24px;
+    }
+
+    &__mobile-logo {
+      width: 83px;
+    }
+
+    &__mobile-title {
+      margin: 45px 0 21px 0;
+    }
+
+    &__mobile-subtitle {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 307px;
+    }
+
+    &__mobile-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+      max-width: 325px;
+      margin-top: 38px;
+    }
+
+    &__input {
+      padding: 9px 24px 10px 24px;
+      @include onestFont($onestH11);
+      line-height: 24px;
+      max-width: unset;
+
+      &::placeholder {
+        @include onestFont($onestH11);
+        line-height: 24px;
+      }
+
+      &_consultation-mode {
+        margin: 0;
+      }
+    }
+
+    &__button {
+      padding: 15px 0;
+      max-width: calc(100vw - 30px);
+      @include onestFont($onestH6);
+      align-self: start;
+      margin: 16px 15px 0 15px;
+    }
+  }
+}

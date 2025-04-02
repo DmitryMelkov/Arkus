@@ -1,0 +1,12 @@
+# *
+User-agent: *
+Allow: /
+
+User-agent: Yandex
+Clean-param: gtm_debug&etext /
+
+# Host
+Host: https://xn--80aurfj.xn--p1ai/
+
+# Sitemaps
+Sitemap: https://xn--80aurfj.xn--p1ai/sitemap.xml

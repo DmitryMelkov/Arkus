@@ -1,0 +1,611 @@
+@import "@/app/styles/variables.module";
+@import "@/app/styles/mixins.module";
+
+.kv {
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 20px;
+    margin-bottom: 24px;
+  }
+
+  &__mobile-menu {
+    display: none;
+  }
+
+  &__title {
+    font: $involveH10_1;
+    line-height: 88px;
+    color: $kvartplataBlue;
+    grid-column: 1 / 3;
+
+    &_span {
+      color: $nightBlue50;
+    }
+  }
+
+  &__top-right-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    grid-column: 3 / 4;
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $kvartplataBlue;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $kvartplataBlue50;
+
+    &_span {
+      color: $nightBlue50;
+    }
+
+    &_br {
+      display: none;
+    }
+
+    &_mobile-br {
+      display: none;
+    }
+  }
+
+  &__kvartplata-icon {
+    width: 180px;
+    margin: 30px 0;
+  }
+
+  &__apps {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__app {
+    display: flex;
+    align-items: center;
+    width: 118px;
+    height: 36px;
+    background-color: $nightBlue30;
+    border-radius: 4px;
+    transition: $btnTransition;
+
+    &:first-of-type {
+      padding-left: 11px;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: 8px;
+    }
+
+    &:last-of-type {
+      padding-left: 11px;
+    }
+
+    &:hover {
+      background-color: $nightBlue50;
+    }
+  }
+
+  &__mobile-graph-container {
+    display: none;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 20px;
+  }
+
+  &__cards {
+    grid-column: 1 / 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 106px;
+  }
+
+  &__card {
+    display: flex;
+    gap: 27px;
+  }
+
+  &__card-icon-container {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $springGreen20;
+  }
+
+  &__card-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  &__card-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  &__card-title {
+    @include onestFont($onestH23);
+    line-height: 36px;
+    color: $oceanBlue;
+    text-transform: uppercase;
+  }
+
+  &__card-text {
+    @include onestFont($onestH16);
+    line-height: 27px;
+    color: $oceanBlue50;
+  }
+
+  &__graph-container {
+    grid-column: 2 / 4;
+    position: relative;
+    width: 100%;
+    margin-top: 112px;
+  }
+
+  &__graph-phone {
+    position: absolute;
+    bottom: 77px;
+    left: 120px;
+    width: 100%;
+    max-width: 243px;
+  }
+
+  &__graph {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__mobile-bottom-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .kv {
+    max-width: 1440px;
+
+    &__title {
+      font: $involveH7;
+      font-weight: 500;
+      line-height: 62px;
+
+      &_span {
+        color: $nightBlue50;
+      }
+    }
+
+    &__subtitle {
+      @include onestFont($onestH17);
+      line-height: 28px;
+    }
+
+    &__card {
+      gap: 22px;
+    }
+
+    &__card-title {
+      @include onestFont($onestH14);
+      line-height: 26px;
+    }
+
+    &__card-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .kv {
+    max-width: 1240px;
+    gap: 0;
+
+    &__wrapper {
+      gap: 40px;
+    }
+
+    &__top {
+      z-index: 2;
+    }
+
+    &__title {
+      font: $involveH5;
+      font-weight: 500;
+      line-height: 46px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH10);
+      line-height: 23px;
+      padding-bottom: 14px;
+    }
+
+    &__kvartplata-icon {
+      width: 119px;
+      margin: 14px 0;
+    }
+
+    &__apps {
+      gap: 11px;
+    }
+
+    &__app {
+      width: 84px;
+      height: 26px;
+
+      &:first-of-type {
+        padding-left: 8px;
+
+        img {
+          width: 55px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        padding-left: 6px;
+
+        img {
+          width: 70px;
+        }
+      }
+
+      &:last-of-type {
+        padding-left: 8px;
+
+        img {
+          width: 68px;
+        }
+      }
+    }
+
+    &__cards {
+      z-index: 3;
+      gap: 63px;
+    }
+
+    &__card {
+      gap: 16px;
+    }
+
+    &__card-icon-container {
+      width: 52px;
+      height: 52px;
+    }
+
+    &__card-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    &__card-text-container {
+      gap: 14px;
+    }
+
+    &__card-title {
+      @include onestFont($onestH11);
+      font-weight: 500;
+      line-height: 23px;
+    }
+
+    &__card-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__graph-container {
+      margin-top: 49px;
+    }
+
+    &__graph-phone {
+      bottom: 53px;
+      max-width: 172px;
+      max-height: 351px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .kv {
+    max-width: 984px;
+
+    &__subtitle {
+      &_br {
+        display: flex;
+      }
+    }
+
+    &__cards {
+      gap: 47px;
+      margin-bottom: 15px;
+    }
+
+    &__br {
+      display: none;
+    }
+
+    &__desktop-br {
+      display: none;
+    }
+
+    &__card-icon-container {
+      min-width: 52px;
+    }
+
+    &__graph-container {
+      margin-top: auto;
+    }
+
+    &__graph-phone {
+      bottom: 55px;
+      max-width: 178px;
+      max-height: 364px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .kv {
+    max-width: 728px;
+
+    &__top {
+      grid-template-columns: 1fr;
+    }
+
+    &__title {
+      max-width: 500px;
+    }
+
+    &__top-right-container {
+      display: grid;
+      grid-template-columns: auto 274px;
+      margin: 38px 0 48px 0;
+    }
+
+    &__subtitle {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      padding: 0;
+      border: unset;
+      max-width: 320px;
+    }
+
+    &__kvartplata-icon {
+      width: 131px;
+      margin: 0 0 13px 0;
+    }
+
+    &__bottom {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    &__cards {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      flex-direction: row;
+    }
+
+    &__card-text {
+      max-width: 270px;
+    }
+
+    &__graph-container {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-top: 22px;
+    }
+
+    &__graph-phone {
+     display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .kv {
+    margin: 0 auto 90px auto;
+    gap: 52px;
+    max-width: 395px;
+    padding: 0 16px;
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      font: $involveH2_1;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 29px;
+    }
+
+    &__top-right-container {
+      display: flex;
+      margin: 32px 0 41px 0;
+    }
+
+    &__kvartplata-icon {
+      display: none;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH10);
+      line-height: 23px;
+      max-width: 361px;
+
+      &_br {
+        display: none;
+      }
+
+      &_mobile-br {
+        display: flex;
+      }
+    }
+
+    &__apps {
+      display: none;
+    }
+
+    &__mobile-graph-container {
+      display: flex;
+      position: relative;
+    }
+
+    &__mobile-graph {
+      width: 100%;
+    }
+
+    &__mobile-graph-title {
+      @include onestFont($onestH3);
+      line-height: 15px;
+      color: $kvartplataBlue50;
+      position: absolute;
+      top: -24px;
+      left: 1px;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__cards {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    &__card {
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    &__card-icon-container {
+      width: 54px;
+      height: 54px;
+    }
+
+    &__card-icon {
+      width: 27px;
+      height: 27px;
+    }
+
+    &__card-text-container {
+      gap: 9px;
+    }
+
+    &__card-title {
+      @include onestFont($onestH9_1);
+      line-height: 20px;
+    }
+
+    &__card-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 345px;
+    }
+
+    &__graph-container {
+      display: none;
+    }
+
+    &__mobile-bottom-container {
+      display: flex;
+      flex-direction: column;
+      margin-top: 52px;
+    }
+
+    &__details-text {
+      @include onestFont($onestH10);
+      line-height: 23px;
+      color: $kvartplataBlue;
+      max-width: 361px;
+    }
+
+    &__details-items {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 40px 0 50px 0;
+    }
+
+    &__details-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &__details-item-check {
+      width: 16px;
+      height: 16px;
+    }
+
+    &__details-item-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      color: $nightBlue50;
+    }
+
+    &__kvartplata-icon-mobile {
+      width: 247px;
+      margin-bottom: 20px;
+    }
+
+    &__mobile-apps {
+      display: flex;
+      gap: 23px;
+    }
+
+    &__mobile-app {
+      display: flex;
+      align-items: center;
+      width: 105px;
+      height: 32px;
+      background-color: $nightBlue30;
+      border-radius: 4px;
+      transition: $btnTransition;
+
+      &:first-of-type {
+        padding-left: 10px;
+      }
+
+      &:nth-of-type(2) {
+        padding-left: 7px;
+      }
+
+      &:last-of-type {
+        padding-left: 10px;
+      }
+
+      &:hover {
+        background-color: $nightBlue50;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .kv {
+    &__mobile-apps {
+      flex-direction: column;
+      gap: 14px;
+    }
+  }
+}

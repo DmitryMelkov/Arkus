@@ -1,0 +1,122 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 29px;
+  border-bottom: 13px solid $oceanBlue;
+  background-color: $blueSky;
+  padding: 36px 0 29px 0;
+  max-width: 600px;
+  width: 100%;
+
+  &__mobile-logo {
+    display: none;
+  }
+
+  &__mobile-br {
+    display: none;
+  }
+
+  &__mobile-text {
+    display: none;
+  }
+
+  &__title {
+    @include onestFont($onestH16);
+    line-height: 27px;
+    color: $nightBlue50;
+    max-width: 328px;
+    text-align: center;
+
+    &_span {
+      color: $oceanBlue;
+    }
+  }
+
+  &__button {
+    @include onestFont($onestH10);
+    line-height: 23px;
+    color: $snowWhite;
+    padding: 23px 0;
+    background-color: $oceanBlue;
+    border-radius: 34px;
+    max-width: 467px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .success {
+    gap: 18px;
+    padding: 25px 0 18px 0;
+    max-width: 416px;
+    border-bottom: 9px solid $oceanBlue;
+
+    &__title {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 250px;
+    }
+
+    &__button {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      padding: 14px 0;
+      border-radius: 34px;
+      max-width: 324px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .success {
+    max-width: unset;
+    gap: 34px;
+    padding: 55px 0 30px 0;
+    border-top: 8px solid $oceanBlue;
+    border-bottom: 8px solid $oceanBlue;
+
+
+    &__mobile-logo {
+      display: flex;
+      width: 41px;
+    }
+
+    &__mobile-br {
+      display: flex;
+    }
+
+    &__mobile-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+    }
+
+    &__title-mobile {
+      @include onestFont($onestH17);
+      line-height: 28px;
+      color: $oceanBlue;
+    }
+
+    &__subtitle-mobile {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      color: $nightBlue50;
+      max-width: 213px;
+      text-align: center;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__button {
+      margin-top: 16px;
+    }
+  }
+}

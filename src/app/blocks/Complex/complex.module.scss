@@ -1,0 +1,382 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.complex {
+	display: flex;
+	flex-direction: column;
+	gap: 126px;
+	padding: 132px 0;
+	background-image: url('../../../../public/images/complex/complex1920.svg');
+	background-repeat: no-repeat;
+	background-size: 628px;
+	background-position: right 0 center;
+	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
+
+	&__wrapper {
+		background-color: $oceanBlue;
+		width: 100%;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+	}
+
+	&__title {
+		font: $involveH10_1;
+		line-height: 97px;
+		color: $snowWhite;
+
+		&_span {
+			color: $kvartplataGreen;
+		}
+	}
+
+	&__text-container {
+		display: flex;
+		gap: 127px;
+	}
+
+	&__text {
+		@include onestFont($onestH25);
+		line-height: 36px;
+		color: $snowWhite;
+
+		&:first-of-type {
+			max-width: 522px;
+		}
+
+		&:last-of-type {
+			max-width: 620px;
+		}
+
+		&_span {
+			color: $kvartplataGreen;
+		}
+
+		&_br {
+			display: none;
+		}
+
+		&_mobile-br {
+			display: none;
+		}
+	}
+
+	&__img-mobile-container {
+		display: none;
+	}
+
+	&__img-mobile {
+		display: none;
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		gap: 37px;
+	}
+
+	&__subtitle {
+		@include onestFont($onestH33);
+		line-height: 57px;
+		color: $snowWhite;
+	}
+
+	&__button-container {
+		display: flex;
+		gap: 20px;
+	}
+
+	&__button {
+		padding: 31px 210px;
+		background-color: $kvartplataGreen;
+		border-radius: 42px;
+		@include onestFont($onestH15);
+		line-height: 27px;
+		color: $oceanBlue;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			background-color: $kvartplataGreenHover;
+		}
+	}
+
+	&__button-text {
+		@include onestFont($onestH16);
+		line-height: 27px;
+		color: $snowWhite50;
+	}
+}
+
+@media screen and (max-width: 1920px) {
+	.complex {
+		max-width: 1440px;
+		background-size: 467px;
+
+		&__title {
+			font: $involveH7;
+			font-weight: 500;
+			line-height: 62px;
+		}
+
+		&__text {
+			@include onestFont($onestH12);
+			line-height: 26px;
+
+			&:first-of-type {
+				max-width: 360px;
+			}
+
+			&:last-of-type {
+				max-width: 466px;
+			}
+		}
+
+		&__bottom {
+			gap: 27px;
+		}
+
+		&__subtitle {
+			@include onestFont($onestH26);
+			line-height: 41px;
+		}
+
+		&__button-container {
+			gap: 21px;
+		}
+
+		&__button {
+			padding: 21px 143px;
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+
+		&__button-text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.complex {
+		gap: 73px;
+		padding: 80px 0;
+		max-width: 1240px;
+		background-size: 334px;
+
+		&__top {
+			gap: 28px;
+		}
+
+		&__title {
+			font: $involveH14;
+			line-height: 46px;
+		}
+
+		&__text-container {
+			gap: 136px;
+		}
+
+		&__text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+
+			&:first-of-type {
+				max-width: 288px;
+			}
+
+			&:last-of-type {
+				max-width: 374px;
+			}
+		}
+
+		&__bottom {
+			gap: 30px;
+		}
+
+		&__subtitle {
+			@include onestFont($onestH20);
+			line-height: 29px;
+		}
+
+		&__button {
+			padding: 14px 142px;
+			border-radius: 50px;
+			@include onestFont($onestH6);
+			line-height: 18px;
+		}
+
+		&__button-text {
+			@include onestFont($onestH5);
+			line-height: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 1279px) {
+	.complex {
+		max-width: 984px;
+		gap: 74px;
+		background-size: 314px;
+
+		&__top {
+			gap: 18px;
+		}
+
+		&__text-container {
+			gap: 47px;
+		}
+
+		&__text {
+			&:first-of-type {
+				max-width: 288px;
+			}
+
+			&:last-of-type {
+				max-width: 314px;
+			}
+		}
+
+		&__subtitle {
+			@include onestFont($onestH12);
+			line-height: 26px;
+		}
+
+		&__button {
+			padding: 14px 99px;
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.complex {
+		max-width: 728px;
+		background-image: url('../../../../public/images/complex/complex768.svg');
+		background-size: 363px;
+		background-position: bottom 80px right 0;
+		gap: 69px;
+
+		&__top {
+			gap: 22px;
+		}
+
+		&__text-container {
+			flex-direction: column;
+			gap: 28px;
+		}
+
+		&__text {
+			&:first-of-type {
+				max-width: 567px;
+			}
+
+			&:last-of-type {
+				max-width: 660px;
+			}
+
+			&_br {
+				display: flex;
+			}
+		}
+
+		&__bottom {
+			gap: 30px;
+		}
+
+		&__button-container {
+			flex-direction: column;
+		}
+
+		&__button {
+			max-width: 321px;
+			padding: 14px 103px;
+			border-radius: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.complex {
+		padding: 40px 16px;
+		gap: 0;
+		background-image: none;
+		max-width: 395px;
+		margin: 0 auto;
+
+		&__img-mobile-container {
+			display: block;
+			margin: 52px 0 38px 0;
+		}
+
+		&__img-mobile {
+			display: block;
+			max-width: 361px;
+			max-height: 176px;
+			width: 100%;
+			height: 100%;
+		}
+
+		&__top {
+			gap: 32px;
+		}
+
+		&__title {
+			font: $involveH2_1;
+			text-align: center;
+			line-height: 29px;
+		}
+
+		&__text-container {
+			gap: 24px;
+		}
+
+		&__text {
+			@include onestFont($onestH7);
+			line-height: 20px;
+			max-width: none;
+
+			&:first-of-type {
+				max-width: 300px;
+			}
+
+			&_mobile-br {
+				display: flex;
+			}
+		}
+
+		&__bottom {
+			gap: 24px;
+		}
+
+		&__subtitle {
+			@include onestFont($onestH12);
+			line-height: 26px;
+			text-align: center;
+		}
+
+		&__button-container {
+			gap: 18px;
+		}
+
+		&__button {
+			max-width: unset;
+			padding: 20px 0;
+		}
+
+		&__button-text {
+			@include onestFont($onestH3);
+			line-height: 15px;
+			max-width: 288px;
+		}
+
+		&__br {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,540 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: 101px;
+  padding: 0 0 222px 0;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  &__wrapper {
+    width: 100%;
+    background: $backgroundGradientSupport;
+  }
+
+  &__title {
+    font: $involveH10;
+    line-height: 97px;
+    color: $oceanBlue;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    display: flex;
+    gap: 21px;
+    align-items: center;
+    padding: 8px 46px;
+    background-color: $snowWhite;
+    border-radius: 42px;
+
+    &:nth-of-type(1) {
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      top: 150px;
+      left: 178px;
+    }
+
+    &:nth-of-type(3) {
+      top: 75px;
+      right: 80px;
+    }
+
+    &:nth-of-type(4) {
+      top: 225px;
+      right: 170px;
+    }
+
+    &:nth-of-type(6) {
+      left: 182px;
+      bottom: 228px;
+    }
+
+    &:nth-of-type(7) {
+      left: 35%;
+      bottom: 75px;
+    }
+
+    &:nth-of-type(8) {
+      right: 0;
+      bottom: 153px;
+    }
+
+    &:nth-of-type(9) {
+      right: 60px;
+      bottom: 0;
+    }
+  }
+
+  &__item-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blueSky;
+  }
+
+  &__item-check-icon {
+    width: 18px;
+    height: 15px;
+  }
+
+  &__item-text {
+    @include onestFont($onestH16);
+    line-height: 27px;
+    color: $oceanBlue;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    margin: 306px auto 391px auto;
+    max-width: 1152px;
+    position: relative;
+  }
+
+  &__text-title {
+    font: $involveH12;
+    line-height: 157px;
+    color: $oceanBlue;
+
+
+    &_span {
+      color: $electricBlue;
+    }
+  }
+
+  &__text-subtitle {
+    @include onestFont($onestH31);
+    line-height: 57px;
+    text-transform: uppercase;
+    color: $oceanBlue;
+  }
+
+  &__text-modal {
+    position: absolute;
+    top: 160px;
+    right: -180px;
+    width: 100%;
+    max-width: 487px;
+    height: 132px;
+  }
+
+  &__modal-container {
+    position: relative;
+  }
+
+  &__modal-arrow {
+    width: 37px;
+  }
+
+  &__modal-title {
+    position: absolute;
+    top: 44px;
+    left: 44px;
+    padding: 14px 59px;
+    border-radius: 0 42px 42px 42px;
+    background-color: $electricBlue;
+    @include onestFont($onestH26);
+    line-height: 39px;
+    color: $snowWhite;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .support {
+    gap: 86px;
+    padding: 0 0 158px 0;
+    max-width: 1440px;
+
+    &__title {
+      font: $involveH7;
+      line-height: 62px;
+    }
+
+    &__item {
+      gap: 15px;
+      padding: 6px 20px;
+
+      &:nth-of-type(1) {
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 107px;
+        left: 117px;
+      }
+
+      &:nth-of-type(3) {
+        top: 53px;
+        right: 51px;
+      }
+
+      &:nth-of-type(4) {
+        top: 160px;
+        right: 115px;
+      }
+
+      &:nth-of-type(6) {
+        left: 120px;
+        bottom: 160px;
+      }
+
+      &:nth-of-type(7) {
+        left: 35%;
+        bottom: 67px;
+      }
+
+      &:nth-of-type(8) {
+        right: 0;
+        bottom: 120px;
+      }
+
+      &:nth-of-type(9) {
+        right: 37px;
+        bottom: 0;
+      }
+    }
+
+    &__item-icon {
+      width: 31px;
+      height: 31px;
+    }
+
+    &__item-check-icon {
+      width: 13px;
+      height: 11px;
+    }
+
+    &__item-text {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__text-container {
+      margin: 224px auto 276px auto;
+      max-width: 799px;
+    }
+
+    &__text-title {
+      font: $involveH8;
+      line-height: 112px;
+    }
+
+    &__text-subtitle {
+      @include onestFont($onestH26);
+      line-height: 41px;
+    }
+
+    &__text-modal {
+      max-width: 322px;
+      height: 69px;
+      top: 113px;
+      right: -150px;
+    }
+
+    &__modal-arrow {
+      width: 27px;
+    }
+
+    &__modal-title {
+      top: 24px;
+      left: 26px;
+      padding: 10px 52px;
+      @include onestFont($onestH12);
+      line-height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .support {
+    max-width: 1240px;
+    gap: 90px;
+    padding: 0 0 80px 0;
+
+    &__title {
+      font: $involveH14;
+      line-height: 46px;
+    }
+
+    &__item {
+      gap: 12px;
+      padding: 5px 16px;
+      border-radius: 26px;
+
+      &:nth-of-type(1) {
+        left: 20px;
+      }
+
+      &:nth-of-type(2) {
+        top: 88px;
+        left: 105px;
+      }
+
+      &:nth-of-type(3) {
+        top: 46px;
+        right: 0;
+      }
+
+      &:nth-of-type(4) {
+        top: 141px;
+        right: 33px;
+      }
+
+      &:nth-of-type(6) {
+        left: 93px;
+        bottom: 142px;
+      }
+
+      &:nth-of-type(7) {
+        left: 328px;
+        bottom: 59px;
+      }
+
+      &:nth-of-type(8) {
+        right: 26px;
+        bottom: 106px;
+      }
+
+      &:nth-of-type(9) {
+        right: 18px;
+        bottom: 1px;
+      }
+    }
+
+    &__item-icon {
+      width: 26px;
+      height: 26px;
+    }
+
+    &__item-check-icon {
+      width: 10px;
+      height: 8px;
+    }
+
+    &__item-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__text-container {
+      margin: 186px auto 247px auto;
+      max-width: 683px;
+    }
+
+    &__text-title {
+      font: $involveH10;
+      line-height: 97px;
+    }
+
+    &__text-subtitle {
+      @include onestFont($onestH25);
+      line-height: 36px;
+    }
+
+    &__text-modal {
+      top: 97px;
+      right: -130px;
+      max-width: 288px;
+      height: 66px;
+    }
+
+    &__modal-arrow {
+      width: 24px;
+    }
+
+    &__modal-title {
+      top: 29px;
+      left: 29px;
+      padding: 9px 43px;
+      border-radius: 0 26px 26px 26px;
+      @include onestFont($onestH10);
+      line-height: 23px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .support {
+    max-width: 984px;
+    padding: 0 0 83px 0;
+
+    &__item {
+      &:nth-of-type(2) {
+        top: 66px;
+      }
+
+      &:nth-of-type(3) {
+        right: 14px;
+      }
+
+      &:nth-of-type(4) {
+        top: 140px;
+        right: 51px;
+      }
+
+      &:nth-of-type(6) {
+        left: 54px;
+      }
+
+      &:nth-of-type(7) {
+        left: 200px;
+      }
+
+      &:nth-of-type(8) {
+        right: 0;
+      }
+
+      &:nth-of-type(9) {
+        right: 51px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .support {
+    max-width: 728px;
+    gap: 66px;
+    padding: 0;
+
+    &__item {
+      &:nth-of-type(1) {
+        left: 0;
+      }
+
+      &:nth-of-type(2) {
+        top: 71px;
+        left: 85px;
+      }
+
+      &:nth-of-type(3) {
+        top: 35px;
+      }
+
+      &:nth-of-type(4) {
+        top: 123px;
+        right: 37px;
+      }
+
+      &:nth-of-type(6) {
+        left: 34px;
+        bottom: 200px;
+      }
+
+      &:nth-of-type(7) {
+        left: 125px;
+        bottom: 112px;
+      }
+
+      &:nth-of-type(8) {
+        right: 0;
+        bottom: 164px;
+      }
+
+      &:nth-of-type(9) {
+        right: 50px;
+        bottom: 60px;
+      }
+    }
+
+    &__text-container {
+      margin: 189px auto 310px auto;
+    }
+
+    &__text-modal {
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .support {
+    padding: 0 16px 88px 16px;
+    gap: 52px;
+    max-width: 395px;
+    margin: 0 auto;
+
+    &__title {
+      font: $involveH2_1;
+      line-height: 29px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    &__item {
+      position: relative;
+      top: unset !important;
+      right: unset !important;
+      bottom: unset !important;
+      left: unset !important;
+    }
+
+    &__item-icon {
+      min-width: 30px;
+      min-height: 30px;
+    }
+
+    &__item-check-icon {
+      width: 12px;
+      height: 9px;
+    }
+
+    &__item-text {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__text-container {
+      margin: 38px auto 83px auto;
+      max-width: 363px;
+    }
+
+    &__text-title {
+      font: $involveH14;
+      line-height: 46px;
+    }
+
+    &__text-subtitle {
+      @include onestFont($onestH6);
+      line-height: 18px;
+    }
+
+    &__text-modal {
+      top: 57px;
+      max-width: 205px;
+      height: 59px;
+    }
+
+    &__modal-arrow {
+      width: 18px;
+    }
+
+    &__modal-title {
+      top: 15px;
+      left: 15px;
+      padding: 10px 26px;
+      border-radius: 0 19px 19px 19px;
+      @include onestFont($onestH5);
+      line-height: 18px;
+      text-wrap: nowrap;
+      background-color: $electricBlue;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.questions {
+  padding: 163px 0 120px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  &__wrapper {
+    width: 100%;
+    background: $backgroundQuestions;
+  }
+
+  &__title {
+    font: $involveH10;
+    line-height: 97px;
+    color: $oceanBlue;
+  }
+
+  &__accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .questions {
+    padding: 133px 0 90px 0;
+    gap: 36px;
+    max-width: 1440px;
+
+    &__title {
+      font: $involveH7;
+      line-height: 62px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .questions {
+    max-width: 1240px;
+    padding: 90px 0 80px 0;
+    gap: 40px;
+
+    &__title {
+      font: $involveH5;
+      line-height: 52px;
+    }
+
+    &__accordions {
+      gap: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .questions {
+    max-width: 984px;
+    padding: 80px 0 60px 0;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .questions {
+    max-width: 728px;
+    padding: 80px 0 67px 0;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .questions {
+    max-width: 395px;
+    margin: 0 auto;
+    padding: 90px 16px 72px 16px;
+    gap: 32px;
+
+    &__title {
+      font: $involveH4;
+      line-height: 43px;
+    }
+
+    &__accordions {
+      gap: 16px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.success {
+  max-width: 406px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 13px solid $oceanBlue;
+  border-bottom: 13px solid $oceanBlue;
+  background-color: $blueSky;
+  padding: 51px 13px 32px 13px;
+  gap: 50px;
+
+  &__top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 53px;
+  }
+
+  &__title {
+    @include onestFont($onestH24);
+    line-height: 36px;
+    color: $oceanBlue;
+    margin: 39px 0 24px 0;
+  }
+
+  &__text {
+    @include onestFont($onestH16);
+    line-height: 27px;
+    color: $nightBlue50;
+    text-align: center;
+  }
+
+  &__button {
+    max-width: 306px;
+    margin: 0 auto;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+    @include onestFont($onestH10);
+    line-height: 23px;
+    color: $snowWhite;
+    background-color: $oceanBlue;
+    border-radius: 27px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .success {
+    max-width: 309px;
+    border-top: 10px solid $oceanBlue;
+    border-bottom: 10px solid $oceanBlue;
+    padding: 43px 10px 24px 10px;
+    gap: 43px;
+
+    &__icon {
+      width: 35px;
+    }
+
+    &__title {
+      @include onestFont($onestH13);
+      line-height: 26px;
+      margin: 30px 0 18px 0;
+    }
+
+    &__text {
+      @include onestFont($onestH7);
+      line-height: 19px;
+    }
+
+    &__button {
+      max-width: 233px;
+      padding: 12px 0;
+      @include onestFont($onestH5);
+      line-height: 18px;
+      border-radius: 21px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .success {
+    max-width: unset;
+    border-top: 8px solid $oceanBlue;
+    border-bottom: 8px solid $oceanBlue;
+    padding: 42px 0 52px 0;
+    gap: 40px;
+
+    &__title {
+      @include onestFont($onestH17);
+      line-height: 28px;
+      margin: 46px 0 26px 0;
+    }
+
+    &__text {
+      line-height: 20px;
+      max-width: 198px;
+    }
+
+    &__button {
+      max-width: 252px;
+      padding: 14px 0;
+      @include onestFont($onestH6);
+      border-radius: 22px;
+    }
+  }
+}

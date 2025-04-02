@@ -1,0 +1,219 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.header {
+  &__wrapper {
+    background-color: $blueSky50;
+    width: 100%;
+  }
+
+  &__top-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-container {
+    img {
+      width: 119px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 46px;
+    margin-top: 5px;
+  }
+
+  &__link {
+    @include onestFont($onestH16);
+    line-height: 27px;
+    color: $oceanBlue;
+    transition: $btnTransition;
+
+    &:hover {
+      color: $electricBlue;
+    }
+  }
+
+  &__phone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__phone {
+    @include onestFont($onestH23);
+    line-height: 36px;
+    color: $oceanBlue;
+  }
+
+  &__mobile-button {
+    display: none;
+  }
+
+  &__phone-subtitle-container {
+    max-width: 1920px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__phone-subtitle {
+    @include onestFont($onestH17_1);
+    line-height: 22px;
+    color: $oceanBlue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 8px 0 0 0;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .header {
+    &__top-container {
+      max-width: 1440px;
+    }
+
+    &__logo-container > img {
+      width: 118px;
+    }
+
+    &__links {
+      margin-top: 4px;
+    }
+
+    &__link {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__phone {
+      @include onestFont($onestH12);
+      line-height: 25px;
+    }
+
+    &__phone-subtitle-container {
+      max-width: 1440px;
+    }
+
+    &__phone-subtitle {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .header {
+    &__top-container {
+      max-width: 1240px;
+      padding: 16px 0;
+    }
+
+    &__links {
+      gap: 38px;
+    }
+
+    &__link {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__phone {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__phone-subtitle-container {
+      max-width: 1240px;
+    }
+
+    &__phone-subtitle {
+      padding: 6px 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .header {
+    &__top-container {
+      max-width: 984px;
+      padding: 9px 0;
+    }
+
+    &__logo-container {
+      img {
+        width: 112px;
+      }
+    }
+
+    &__links {
+      gap: 16px;
+      margin-top: 0;
+    }
+
+    &__link {
+      @include onestFont($onestH5);
+      line-height: 18px;
+    }
+
+    &__phone {
+      @include onestFont($onestH7);
+      line-height: 20px;
+    }
+
+    &__phone-subtitle-container {
+      max-width: 984px;
+    }
+
+    &__phone-subtitle {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    position: relative;
+
+    &__top-container {
+      padding: 23px 0;
+      max-width: 728px;
+    }
+
+    &__links {
+      display: none;
+    }
+
+    &__phone-container {
+      display: none;
+    }
+
+    &__mobile-button {
+      display: flex;
+      background: unset;
+      border: unset;
+    }
+
+    &__phone-subtitle {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &__top-container {
+      padding: 23px 16px;
+    }   
+  }
+}

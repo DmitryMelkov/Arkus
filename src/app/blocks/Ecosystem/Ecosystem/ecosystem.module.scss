@@ -1,0 +1,669 @@
+@import "@/app/styles/variables.module";
+@import "@/app/styles/mixins.module";
+
+.ecosystem {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 1920px;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+  }
+
+  &__top-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__title {
+    font: $involveH10_1;
+    line-height: 97px;
+    color: $nightBlue50;
+    max-width: 1200px;
+    grid-column: 1 / 3;
+
+    &_span {
+      color: $electricBlue;
+    }
+  }
+
+  &__subtitle {
+    width: 100%;
+    @include onestFont($onestH25);
+    line-height: 36px;
+    color: $electricBlue70;
+    grid-column: 3 / 4;
+
+    &_span {
+      color: $electricBlue;
+    }
+  }
+
+  &__bottom-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__column-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 50px;
+
+    &:last-of-type {
+      border-top: 1px solid $electricBlue50;
+    }
+  }
+
+  &__column-image {
+    width: 168px;
+
+    &_kv {
+      width: 276px;
+    }
+  }
+
+  &__column-title {
+    margin: 39px 0;
+    @include onestFont($onestH23);
+    line-height: 36px;
+    text-transform: uppercase;
+
+    &_kv {
+      margin: 35px 0 39px 0;
+    }
+  }
+
+  &__column-link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
+
+    &:hover {
+      color: $electricBlue;
+    }
+
+    &-billing {
+      color: $billing;
+    }
+
+    &-crm {
+      color: $crm;
+    }
+
+    &-kvo {
+      color: $kvartplataBlue;
+    }
+  }
+
+  &__column-subtitle {
+    @include onestFont($onestH16);
+    color: $oceanBlue50;
+    line-height: 27px;
+    margin-bottom: 81px;
+  }
+
+  &__graph-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__graph-title {
+    @include onestFont($onestH7);
+    line-height: 20px;
+    color: $electricBlue70;
+
+    &-billing-sm {
+      display: none;
+    }
+
+    &-crm-sm {
+      display: none;
+    }
+  }
+
+  &__billing-graph-container {
+    gap: 49px;
+  }
+
+  &__billing-graph {
+    width: 388px;
+    height: 238px;
+    margin: 0 0 0 47px;
+  }
+
+  &__crm-graph-container {
+    gap: 49px;
+  }
+
+  &__crm-graph {
+    width: 465px;
+    height: 238px;
+  }
+
+  &__kv-graph-container {
+    gap: 51px;
+  }
+
+  &__kv-graph {
+    width: 326px;
+    height: 238px;
+    margin: 0 0 0 85px;
+  }
+
+  &__small-br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .ecosystem {
+    max-width: 1440px;
+
+    &__title {
+      font: $involveH7;
+      font-weight: 500;
+      line-height: 62px;
+      max-width: 952px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH17);
+      line-height: 28px;
+      max-width: 467px;
+    }
+
+    &__column-image {
+      width: 125px;
+      height: 30px;
+
+      &_kv {
+        object-fit: cover;
+        width: 196px;
+      }
+    }
+
+    &__column-title {
+      @include onestFont($onestH14);
+      line-height: 26px;
+      margin: 34px 0 24px 0;
+    }
+
+    &__column-subtitle {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      margin-bottom: 80px;
+    }
+
+    &__billing-graph {
+      width: 360px;
+      height: 220px;
+    }
+
+    &__crm-graph {
+      width: 465px;
+      height: 220px;
+    }
+
+    &__kv-graph {
+      width: 296px;
+      height: 217px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ecosystem {
+    max-width: 1240px;
+
+    &__wrapper {
+      gap: 40px;
+    }
+
+    &__title {
+      font: $involveH14;
+      line-height: 51px;
+      max-width: 780px;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH10);
+      line-height: 23px;
+      max-width: 397px;
+    }
+
+    &__column-container {
+      padding-top: 20px;
+    }
+
+    &__column-title {
+      @include onestFont($onestH11);
+      font-weight: 500;
+      line-height: 23px;
+      margin: 24px 0 14px 0;
+    }
+
+    &__column-subtitle {
+      @include onestFont($onestH5);
+      line-height: 18px;
+      margin-bottom: 29px;
+    }
+
+    &__graph-title {
+      @include onestFont($onestH5);
+      line-height: 18px;
+
+      &-crm {
+        padding-left: 32px;
+      }
+    }
+
+    &__billing-graph-container {
+      gap: 12px;
+    }
+
+    &__billing-graph {
+      width: 249px;
+      height: 152px;
+      margin: 0 0 0 60px;
+    }
+
+    &__crm-graph-container {
+      gap: 1px;
+    }
+
+    &__crm-graph {
+      width: 400px;
+      height: 163px;
+    }
+
+    &__kv-graph-container {
+      gap: 1px;
+    }
+
+    &__kv-graph {
+      width: 223px;
+      height: 163px;
+      margin: 0 0 0 68px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .ecosystem {
+    max-width: 984px;
+    gap: 14px;
+
+    &__title {
+      line-height: 46px;
+      max-width: 561px;
+    }
+
+    &__subtitle {
+      max-width: unset;
+    }
+
+
+
+    &__column-container {
+      padding-top: 40px;
+    }
+
+    &__column-title {
+      max-width: 201px;
+    }
+
+    &__column-subtitle {
+      height: 92px;
+      margin-bottom: 0;
+    }
+
+    &__billing-graph-container {
+      gap: 25px;
+    }
+
+    &__billing-graph {
+      max-width: 203px;
+      max-height: 120px;
+      margin: 0 0 0 49px;
+    }
+
+    &__graph-title-crm {
+      padding-left: 0;
+    }
+
+    &__crm-graph-container {
+      gap: 17px;
+    }
+
+    &__crm-graph {
+      width: 314px;
+      height: 128px;
+    }
+
+    &__kv-graph-container {
+      gap: 17px;
+    }
+
+    &__kv-graph {
+      width: 175px;
+      height: 128px;
+      margin: 0 0 0 65px;
+    }
+
+    &__desktop-br {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .ecosystem {
+    max-width: 728px;
+    gap: 40px;
+
+    &__top-container {
+      display: flex;
+      flex-direction: column;
+      gap: 38px;
+    }
+
+    &__title {
+      line-height: 46px;
+      max-width: 700px;
+    }
+
+    &__subtitle {
+      max-width: 728px;
+    }
+
+    &__bottom-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &__column-container {
+      padding: 0;
+      display: grid;
+      grid-template-columns: auto 271px;
+      grid-template-rows: 30px auto auto;
+
+      &:last-of-type {
+        border: unset;
+      }
+    }
+
+    &__column-image {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &__column-title {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      max-width: unset;
+    }
+
+    &__column-subtitle {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      margin: 0;
+      height: auto;
+    }
+
+    &__graph-container {
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+    }
+
+    &__picture {
+      display: flex;
+    }
+
+    &__billing-graph-container {
+      gap: 6px;
+    }
+
+    &__billing-graph {
+      width: 239px;
+      height: 128px;
+      margin: 0;
+    }
+
+    &__crm-graph-container {
+      gap: 0;
+    }
+
+    &__crm-graph {
+      width: 271px;
+      height: 122px;
+    }
+
+    &__kv-graph-container {
+      gap: 12px;
+    }
+
+    &__kv-graph {
+      width: 175px;
+      height: 128px;
+      margin: 0 0 0 48px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ecosystem {
+    gap: 52px;
+    padding: 0 16px 90px 16px;
+    margin: 0 auto;
+    max-width: 393px;
+
+    &__top-container {
+      gap: 34px;
+    }
+
+    &__title {
+      font: $involveH2_1;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 29px;
+    }
+
+    &__subtitle {
+      max-width: 361px;
+      @include onestFont($onestH12);
+      line-height: 26px;
+    }
+
+    &__bottom-container {
+      gap: 32px;
+      margin: 0 auto;
+    }
+
+    &__column-container {
+      grid-template-columns: 186px 177px;
+      grid-template-rows: 35px auto auto;
+      gap: 0 5px;
+    }
+
+    &__column-image {
+      width: auto;
+      height: 35px;
+    }
+
+    &__column-title {
+      @include onestFont($onestH9_1);
+      line-height: 20px;
+      margin: 25px 0 20px 0;
+      max-width: 180px;
+    }
+
+    &__column-subtitle {
+      @include onestFont($onestH7);
+      line-height: 20px;
+      max-width: 186px;
+    }
+
+    &__mobile-br {
+      display: none;
+    }
+
+    &__small-br {
+      display: block;
+    }
+
+    &__graph-container {
+      align-self: flex-end;
+    }
+
+    &__picture {
+      justify-content: flex-end;
+    }
+
+    &__graph-title {
+      @include onestFont($onestH3);
+      line-height: 15px;
+      text-align: end;
+
+      &-billing {
+        display: none;
+      }
+
+      &-billing-sm {
+        display: block;
+      }
+
+      &-crm {
+        display: none;
+      }
+
+      &-crm-sm {
+        display: block;
+      }
+    }
+
+    &__billing-graph-container {
+      gap: 33px;
+    }
+
+    &__billing-graph {
+      width: 131px;
+      height: 112px;
+    }
+
+    &__crm-graph-container {
+      gap: 22px;
+    }
+
+    &__crm-graph {
+      width: 175px;
+      height: 143px;
+    }
+
+    &__kv-graph-container {
+      gap: 23px;
+    }
+
+    &__kv-graph {
+      width: 172px;
+      height: 123px;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .ecosystem {
+    gap: 38px;
+    padding-left: 12px;
+
+    &__top-container {
+      gap: 32px;
+    }
+
+    &__title {
+      font: $involveH2_01;
+      line-height: 100%;
+    }
+
+    &__subtitle {
+      @include onestFont($onestH7);
+    }
+
+    &__column-image {
+      grid-column: 1 / 3;
+      width: 111px;
+
+      &_kv {
+        width: 153px;
+        height: 26px;
+        object-fit: contain
+      }
+    }
+
+    &__column-title {
+      @include onestFont($onestH6);
+      line-height: 18px;
+      margin: 25px 0 16px 0;
+    }
+
+    &__column-subtitle {
+      @include onestFont($onestH3);
+      line-height: 15px;
+    }
+
+    &__column-container {
+      grid-template-columns: auto auto;
+      grid-template-rows: 28px auto auto;
+    }
+
+    &__column-subtitle {
+      max-width: 148px;
+    }
+
+    &__graph-title {
+      @include onestFont($onestH2);
+      line-height: 13px;
+    }
+
+    &__billing-graph-container {
+      gap: 29px;
+    }
+
+    &__billing-graph {
+      width: 106px;
+      height: 93px;
+    }
+
+    &__crm-graph-container {
+      gap: 15px;
+    }
+
+    &__crm-graph {
+      width: 109px;
+      height: 114px;
+    }
+
+    &__kv-graph-container {
+      gap: 17px;
+    }
+
+    &__kv-graph {
+      width: 121px;
+      height: 88px;
+    }
+
+    &__small-br {
+      display: none;
+    }
+  }
+}

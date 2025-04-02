@@ -1,0 +1,156 @@
+@import '@/app/styles/variables.module';
+@import '@/app/styles/mixins.module';
+
+.header {
+  &__mobile-popup {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1023px) {
+  .header {
+    &__mobile-popup {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      z-index: 999;
+      background: $backgroundGradient;
+      transition: $popupTransition;
+
+      &_visible {
+        overflow: visible;
+        opacity: 1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &__close-button-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-color: $blueSky50;
+    }
+
+    &__close-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      max-width: 728px;
+      padding: 20px 26px;
+    }
+
+    &__mobile-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 728px;
+      width: 100%;
+    }
+
+    &__mobile-nav {
+      display: flex;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 52px;
+      margin-bottom: 113px;
+    }
+
+    &__mobile-links {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+    }
+
+    &__mobile-link {
+      @include onestFont($onestH25);
+      line-height: 36px;
+      color: $oceanBlue;
+    }
+
+    &__mobile-order-button {
+      padding: 20px 99px;
+      @include onestFont($onestH5);
+      line-height: 18px;
+      color: $blueSky;
+      background-color: $oceanBlue;
+      border-radius: 50px;
+      max-width: 361px;
+      margin: 0 auto;
+    }
+
+    &__mobile-phone-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin: 32px 0 67px 0;
+    }
+
+    &__mobile-phone {
+      @include onestFont($onestH12);
+      line-height: 26px;
+      color: $oceanBlue;
+    }
+
+    &__mobile-phone-subtitle {
+      @include onestFont($onestH7_1_2);
+      line-height: 20px;
+      color: $oceanBlue;
+      text-decoration: underline;
+    }
+
+    &__mobile-logo {
+      width: 78px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    &__close-button {
+      padding: 20px 16px;
+    }  
+
+    &__mobile-order-button {
+      padding: 19px 83px;
+      @include onestFont($onestH9);
+    }
+
+    &__mobile-phone-container {
+      gap: 5px;
+      margin: 32px 0 90px 0;
+    }
+
+    &__mobile-logo {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 393px) {
+  .header {
+    &__mobile-nav {
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+
+    &__mobile-phone-container {
+      margin: 32px 0;
+    }
+  }
+}
